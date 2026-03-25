@@ -1,9 +1,10 @@
-## Local Elections Data for Kerala
+## Kerala Local Government Seat Reservation Status and Winner Attributes
 
-## 🔗 Adjacent Repositories
+* [Scripts](scripts/)
 
-- [in-rolls/local_elections_up](https://github.com/in-rolls/local_elections_up) — UP Local Election Data --- GP and ULB. Seat reservation, winner, and candidates for some elections
-- [in-rolls/local_elections_uttarakhand](https://github.com/in-rolls/local_elections_uttarakhand) — Data on Local Elections from Uttarakhand
-- [in-rolls/local_elections_bihar](https://github.com/in-rolls/local_elections_bihar) — Candidate Info. + Valid Votes Won by Cands. in the 2016 Bihar Panchayat Elections
-- [in-rolls/parse_unsearchable_rolls](https://github.com/in-rolls/parse_unsearchable_rolls) — Parse Unsearchable Electoral Rolls
-- [in-rolls/mnrega_social](https://github.com/in-rolls/mnrega_social) — MNREGA Social Audit Data
+* Candidate photos + CSV at: https://doi.org/10.7910/DVN/0IUQO1
+  * Data schema: Year, LGI Type, District, Block, Municipality, Corporation,	Grama Panchayat, Ward No., Ward Name, Elected Members, Role, Party, Reservation,	Name of Member, Address,	Phone,	Mobile,	Age,	Female/Male,	Marital Status, Educational Qualification,	Occupation, Image
+  * Seat Reservation Status is unknown for 2005. 
+  
+* Source: https://lsgkerala.gov.in/election2005/electionDetails.php and https://lsgkerala.gov.in/en/lbelection/lbelection/2020
+
