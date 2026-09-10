@@ -1,3 +1,11 @@
-
 .DS_Store
-.ipynb_checkpoints/kerala_2010_parse-checkpoint.ipynb
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+.venv/
+*.egg-info/
+build/
+dist/
+*.log
+*.part
+data/derived/

@@ -1,0 +1,260 @@
+{
+  "format_version": 1,
+  "sources": [
+    {
+      "file": "lsgi-election-kerala-2005.csv",
+      "sha256": "7761384684ac8a6526e31bf8db13558f8e31823d96cbdf3aaa2c0ac15070a881"
+    },
+    {
+      "file": "lsgi-election-kerala-2015-fix.csv",
+      "sha256": "e0add32068003cc5c7ab69302002bb1267a38f002586d9acd112b3aec9536357"
+    },
+    {
+      "file": "lsgi-election-kerala-2015.csv",
+      "sha256": "c7cb363b684601c97d31ff164b6c96b669cb807695a2ec073057ce1ead81e56c"
+    },
+    {
+      "file": "lsgi-election-kerala-2020.csv",
+      "sha256": "bfd5a44d21c0b84212b7f7673f1bd3861cd2aabd33bb19a7d4bf49f4492bfad9"
+    },
+    {
+      "file": "lsgi-election-kerala.csv",
+      "sha256": "b7772cf45b3f27d7160c6a8f1209df793281fdcf009a46a03687272d8826fdd0"
+    }
+  ],
+  "excluded_2005_structural_rows": {
+    "body_heading": 1223,
+    "column_header": 1223
+  },
+  "files": [
+    {
+      "file": "kerala_2005.parquet",
+      "rows": 20551,
+      "sha256": "35799a0e6615b7e2f536ab7bf6927d98c0e39775dd22bab424da3df822f79321",
+      "schema": [
+        {
+          "name": "year",
+          "type": "int16",
+          "nullable": true
+        },
+        {
+          "name": "lgi_type",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "district_raw",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "block_raw",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "municipality_raw",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "corporation_raw",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "grama_panchayat_raw",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "ward_no_raw",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "elected_member_raw",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "front_raw",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "votes_raw",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "body_heading_raw",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "source_file",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "source_row",
+          "type": "int32",
+          "nullable": false
+        },
+        {
+          "name": "quality_flags",
+          "type": "list<element: string>",
+          "nullable": false
+        }
+      ]
+    },
+    {
+      "file": "kerala_2010_2020.parquet",
+      "rows": 65296,
+      "sha256": "a57b79fecb4acacd4fd21e9af9353219ecd02dc45246b37df0cdb6dbfaafced3",
+      "schema": [
+        {
+          "name": "year",
+          "type": "int16",
+          "nullable": true
+        },
+        {
+          "name": "lgi_type",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "district_raw",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "block_raw",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "municipality_raw",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "corporation_raw",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "grama_panchayat_raw",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "ward_no_raw",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "ward_name_raw",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "elected_member_raw",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "role_raw",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "party_raw",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "reservation_raw",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "profile_ward_no_raw",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "profile_ward_name_raw",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "member_name_raw",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "address_raw",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "phone_raw",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "mobile_raw",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "age_raw",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "sex_raw",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "marital_status_raw",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "education_raw",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "occupation_raw",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "image_url",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "source_file",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "source_row",
+          "type": "int32",
+          "nullable": false
+        },
+        {
+          "name": "quality_flags",
+          "type": "list<element: string>",
+          "nullable": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "Please cite the deposited dataset using the metadata below."
+type: dataset
+title: "Kerala Local Election Data"
+version: "1.0"
+authors:
+  - family-names: Sood
+    given-names: Gaurav
+    email: contact@gsood.com
+identifiers:
+  - type: doi
+    value: 10.7910/DVN/0IUQO1
+repository-code: "https://github.com/in-rolls/local_elections_kerala"
+url: "https://doi.org/10.7910/DVN/0IUQO1"
+license: CC0-1.0
+keywords:
+  - Kerala
+  - local elections
+  - elected members
+  - seat reservations
