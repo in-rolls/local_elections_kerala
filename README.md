@@ -1,6 +1,5 @@
 # Kerala Local Election Data
 
-[![CI](https://github.com/in-rolls/local_elections_kerala/actions/workflows/ci.yml/badge.svg)](https://github.com/in-rolls/local_elections_kerala/actions/workflows/ci.yml)
 [![DOI](https://img.shields.io/badge/DOI-10.7910%2FDVN%2F0IUQO1-blue)](https://doi.org/10.7910/DVN/0IUQO1)
 
 Historical Kerala local-election records for 2005, 2010, 2015, and 2020, including elected members, party or front, and seat reservations where collected. This repository preserves the original CSVs and saved HTML, provides typed Parquet exports, and supports offline reproduction. Candidate photographs and the deposited dataset are available on [Harvard Dataverse](https://doi.org/10.7910/DVN/0IUQO1).
@@ -104,10 +103,9 @@ The HTML parser keeps row order, uses the election-table headers to avoid naviga
 
 ```sh
 make check
-make ci-docker
 ```
 
-Checks cover CSV structure, duplicate-header preservation, 2005 structural rows, missing values, table selection, failure reporting, exact Parquet schema/value comparisons, and source checksums. CI and the standard Docker target test Python 3.12 and 3.14. The environment is managed by uv; these data tools do not require an installed library package.
+Checks cover CSV structure, duplicate-header preservation, 2005 structural rows, missing values, table selection, failure reporting, exact Parquet schema/value comparisons, and source checksums. Run `make verify-data` explicitly for Parquet/schema/source-checksum verification when data change. The environment is managed by uv; these data tools do not require an installed library package.
 
 ## Citation
 
@@ -128,3 +126,7 @@ Code is [MIT licensed](LICENSE). The registered Dataverse dataset is released un
 - [in-rolls/parse_unsearchable_rolls](https://github.com/in-rolls/parse_unsearchable_rolls) — Parse Unsearchable Electoral Rolls
 
 ✨ _Powered by [Adjacent](https://github.com/gojiplus/adjacent)_ 🚀
+
+## Maintenance
+
+This is a point-in-time data collection; see the [shared maintenance policy](https://github.com/soodoku/data-repos#maintenance-policy). Run the affected parser tests when code changes and the relevant data validators when inputs or outputs change. Full-data checks and publication are explicit operations. Routine edits do not require hosted CI, Docker, a Python-version matrix, Preen or pre-commit.
