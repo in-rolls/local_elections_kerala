@@ -7,7 +7,8 @@ from urllib.parse import urljoin
 
 import pyarrow as pa
 from bs4 import BeautifulSoup
-from to_parquet import digest, write_table
+
+from local_elections_kerala.parse.to_parquet import digest, write_table
 
 HEADERS = ["Ward No.", "Ward Name", "Elected Members", "Role", "Party", "Reservation"]
 COLUMNS = [

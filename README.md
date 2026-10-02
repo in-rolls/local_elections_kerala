@@ -6,15 +6,18 @@ Historical Kerala local-election records for 2005, 2010, 2015, and 2020, includi
 
 ## Data
 
-| File | Elections | Records | Contents |
-|---|---|---:|---|
-| [kerala_2005.parquet](data/fin/kerala_2005.parquet) | 2005 | 20,551 | Ward records, elected members, front, and source vote text |
-| [kerala_2010_2020.parquet](data/fin/kerala_2010_2020.parquet) | 2010, 2015, 2020 | 65,296 | Ward listings and member-profile fields |
-| [Dataverse release](https://doi.org/10.7910/DVN/0IUQO1) | Historical collection | See deposit | Original data and candidate photographs |
+<!-- datasets:start -->
+
+| File | Rows | Each row represents |
+| --- | ---: | --- |
+| [fin/kerala_2005.parquet](data/fin/kerala_2005.parquet) | 20,551 | 2005 ward record with elected member, front and vote text |
+| [fin/kerala_2010_2020.parquet](data/fin/kerala_2010_2020.parquet) | 65,296 | Ward listing with member-profile fields |
+
+<!-- datasets:end -->
 
 The later export contains 21,607 records for 2010, 21,803 for 2015, and 21,886 for 2020. These are collected records, not independently verified coverage totals. They span district panchayats, block panchayats, grama panchayats, municipalities, and corporations. They do not form a validated panel of stable seats across years.
 
-[MANIFEST.json](data/fin/MANIFEST.json) records schemas, source checksums, export checksums, and row counts. `make verify-data` checks the exports against the declared CSV inputs. Existing source files remain under [data/](data/).
+[MANIFEST.json](data/fin/MANIFEST.json) records schemas, source checksums, export checksums, and row counts. `make verify` checks the exports against the declared CSV inputs. Existing source files remain under [data/](data/).
 
 ## Column dictionary
 
@@ -71,7 +74,7 @@ The saved HTML's original capture timestamps and complete request manifest were 
 git clone https://github.com/in-rolls/local_elections_kerala.git
 cd local_elections_kerala
 uv sync --frozen --group dev
-make verify-data
+make verify
 ```
 
 Read an export:
@@ -87,14 +90,14 @@ print(table.schema)
 Rebuild the published Parquet files from the retained CSVs:
 
 ```sh
-make to-parquet
-make verify-data
+make data
+make verify
 ```
 
 Parse a saved ward page into a separate output:
 
 ```sh
-uv run python scripts/parse_html.py data/2010/downloaded_htmls/document_1000.html --out data/derived/ward_sample.parquet
+uv run python -m local_elections_kerala.parse.parse_html data/2010/downloaded_htmls/document_1000.html --out data/derived/ward_sample.parquet
 ```
 
 The HTML parser keeps row order, uses the election-table headers to avoid navigation tables, and resolves member links against the LSG host. It does not infer geography from the local filename or join separate profile records by row position. A malformed or missing table produces a failure receipt and a nonzero exit; the existing Parquet output is not replaced.
@@ -105,7 +108,7 @@ The HTML parser keeps row order, uses the election-table headers to avoid naviga
 make check
 ```
 
-Checks cover CSV structure, duplicate-header preservation, 2005 structural rows, missing values, table selection, failure reporting, exact Parquet schema/value comparisons, and source checksums. Run `make verify-data` explicitly for Parquet/schema/source-checksum verification when data change. The environment is managed by uv; these data tools do not require an installed library package.
+Checks run the linter and compare every published Parquet field and schema against the source CSVs, including source and export checksums. Maintained Python code lives under `src/local_elections_kerala/parse` and `src/local_elections_kerala/build`.
 
 ## Citation
 
@@ -129,4 +132,4 @@ Code is [MIT licensed](LICENSE). The registered Dataverse dataset is released un
 
 ## Maintenance
 
-This is a point-in-time data collection; see the [shared maintenance policy](https://github.com/soodoku/data-repos#maintenance-policy). Run the affected parser tests when code changes and the relevant data validators when inputs or outputs change. Full-data checks and publication are explicit operations. Routine edits do not require hosted CI, Docker, a Python-version matrix, Preen or pre-commit.
+This is a point-in-time data collection; see the [shared maintenance policy](https://github.com/soodoku/data-repos#maintenance-policy). Run the affected parsers on retained inputs when code changes and the relevant data validators when inputs or outputs change. Full-data checks and publication are explicit operations. Routine edits do not require hosted CI, Docker, a Python-version matrix, Preen or pre-commit.

@@ -1,16 +1,23 @@
-.PHONY: check test to-parquet verify-data
+PY ?= uv run python
+RUFF ?= uv run ruff
 
-check:
+.PHONY: sync data lint verify data-summary check
+
+sync:
 	uv sync --frozen --group dev
-	uv run ruff check .
-	uv run ruff format --check .
-	uv run pytest -q
 
-test:
-	uv run pytest -q
+data:
+	$(PY) -m local_elections_kerala.parse.to_parquet
+	$(PY) -m local_elections_kerala.build.release summary
 
-to-parquet:
-	uv run python scripts/to_parquet.py
+lint:
+	$(RUFF) check .
+	$(RUFF) format --check .
 
-verify-data:
-	uv run python scripts/to_parquet.py --check
+verify:
+	$(PY) -m local_elections_kerala.build.release verify
+
+data-summary:
+	$(PY) -m local_elections_kerala.build.release summary
+
+check: lint verify
