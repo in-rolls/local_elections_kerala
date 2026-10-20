@@ -30,10 +30,10 @@ The `_raw` suffix marks a value carried from the historical source, without subs
 | `district_raw`, `block_raw`, `municipality_raw`, `corporation_raw`, `grama_panchayat_raw` | Location/body labels stored by the original scraper; see the district-label defect below |
 | `ward_no_raw`, `ward_name_raw` | Ward number and name from the listing; 2005 lacks ward names |
 | `elected_member_raw` | Name in the elected-members listing |
-| `role_raw`, `party_raw`, `reservation_raw` | Listing fields for 2010–2020 |
+| `role_raw`, `party_raw`, `reserved_raw` | Listing fields for 2010–2020 |
 | `profile_ward_no_raw`, `profile_ward_name_raw`, `member_name_raw` | Separate ward and member fields from the member profile, 2010–2020 |
 | `address_raw`, `phone_raw`, `mobile_raw` | Historical member-profile contact fields, 2010–2020 |
-| `age_raw`, `sex_raw`, `marital_status_raw`, `education_raw`, `occupation_raw` | Historical member-profile attributes, 2010–2020 |
+| `age_raw`, `winner_woman_raw`, `marital_status_raw`, `education_raw`, `occupation_raw` | Historical member-profile attributes, 2010–2020 |
 | `image_url` | Historical photograph URL; the export does not download images |
 | `front_raw`, `votes_raw` | 2005 front and vote cells; vote cells can contain text |
 | `body_heading_raw` | 2005 body heading retained from the table above the record |

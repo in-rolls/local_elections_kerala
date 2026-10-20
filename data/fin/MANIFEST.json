@@ -112,7 +112,7 @@
     {
       "file": "kerala_2010_2020.parquet",
       "rows": 65296,
-      "sha256": "a57b79fecb4acacd4fd21e9af9353219ecd02dc45246b37df0cdb6dbfaafced3",
+      "sha256": "d623b3dfa954819d9b74768f95379b2431bff38e6dc2e2d70f00dcfd251f36e4",
       "schema": [
         {
           "name": "year",
@@ -175,7 +175,7 @@
           "nullable": true
         },
         {
-          "name": "reservation_raw",
+          "name": "reserved_raw",
           "type": "string",
           "nullable": true
         },
@@ -215,7 +215,7 @@
           "nullable": true
         },
         {
-          "name": "sex_raw",
+          "name": "winner_woman_raw",
           "type": "string",
           "nullable": true
         },

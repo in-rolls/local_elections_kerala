@@ -17,7 +17,7 @@ COLUMNS = [
     "elected_member_raw",
     "role_raw",
     "party_raw",
-    "reservation_raw",
+    "reserved_raw",
 ]
 SCHEMA = pa.schema(
     [
