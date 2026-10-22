@@ -1,0 +1,12 @@
+{
+  "document_id": "ernakulam",
+  "errors": [
+    {
+      "error": "<urlopen error timed out>",
+      "error_type": "URLError",
+      "url": "https://www.sec.kerala.gov.in/public/elercd/download/da705d3a-c8ac-4352-b45f-9e10ac033dd1"
+    }
+  ],
+  "finished_at": "2026-10-22T01:08:48.370134+00:00",
+  "status": "failed"
+}

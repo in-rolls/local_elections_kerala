@@ -1,0 +1,12 @@
+{
+  "document_id": "kollam",
+  "errors": [
+    {
+      "error": "<urlopen error timed out>",
+      "error_type": "URLError",
+      "url": "https://www.sec.kerala.gov.in/public/elercd/download/69ff4d74-9ebb-47c2-a1e3-9d0a99eeebb5"
+    }
+  ],
+  "finished_at": "2026-10-22T01:08:18.349080+00:00",
+  "status": "failed"
+}

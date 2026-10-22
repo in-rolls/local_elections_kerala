@@ -1,0 +1,20 @@
+{
+  "candidate_csv_sha256": "4455db7fd6cd24468f0085b4715e42fb6f81baf0b4fbd49541753bb9e32fa4dd",
+  "candidate_field_status": {
+    "complete": 73824,
+    "partial": 869
+  },
+  "candidate_rows": 74693,
+  "pages_with_candidates": 1803,
+  "parser": "pdftotext -layout -enc UTF-8",
+  "pdf_pages": 1803,
+  "source_file": "/Users/soodoku/Documents/GitHub/in-rolls/local_elections_kerala/data/sec_modern/source/2020_candidates.pdf",
+  "source_sha256": "664bd7501ff9c203fee58395f531e0f3839c5e9ad9ab6ba523c55913f310667d",
+  "vote_leaders_csv_sha256": "fe26045311e7c9972c26efbe3de2aeb4c135253114a0d8dc984e11954324364f",
+  "ward_rows": 21821,
+  "winner_status": {
+    "tied_max": 39,
+    "unique_max": 21782
+  },
+  "zero_top_votes": 25
+}

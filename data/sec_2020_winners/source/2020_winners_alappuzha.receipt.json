@@ -1,0 +1,12 @@
+{
+  "document_id": "2020_winners_alappuzha",
+  "errors": [
+    {
+      "error": "<urlopen error timed out>",
+      "error_type": "URLError",
+      "url": "https://sec.kerala.gov.in/public/elercd/download/e13e591c-7190-4ad7-98c2-9f4f5024ae55"
+    }
+  ],
+  "finished_at": "2026-10-22T01:38:44.013739+00:00",
+  "status": "failed"
+}

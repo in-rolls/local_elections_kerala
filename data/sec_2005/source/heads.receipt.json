@@ -1,0 +1,12 @@
+{
+  "document_id": "heads",
+  "errors": [
+    {
+      "error": "<urlopen error timed out>",
+      "error_type": "URLError",
+      "url": "https://www.sec.kerala.gov.in/public/elercd/download/32aa9087-5439-43a6-be1d-dba8d82dd21a"
+    }
+  ],
+  "finished_at": "2026-10-22T01:09:30.404266+00:00",
+  "status": "failed"
+}

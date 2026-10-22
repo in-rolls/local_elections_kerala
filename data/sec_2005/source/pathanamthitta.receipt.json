@@ -1,0 +1,12 @@
+{
+  "document_id": "pathanamthitta",
+  "errors": [
+    {
+      "error": "<urlopen error timed out>",
+      "error_type": "URLError",
+      "url": "https://www.sec.kerala.gov.in/public/elercd/download/d90fe970-b945-4e57-8db5-49a64a14433a"
+    }
+  ],
+  "finished_at": "2026-10-22T01:08:24.353711+00:00",
+  "status": "failed"
+}

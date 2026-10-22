@@ -1,0 +1,165 @@
+{
+  "acquisition_coverage_sha256": "b63b4937b0bef725a52d1ba3075bb608be731fd26fc36515cf41dddfaa5900ed",
+  "body_crosswalk_sha256": "e61663f5c07cd81777e1a0016b98a2c7896167bf21163f77b8908c9f065ccd5b",
+  "candidate_leaders_sha256": "fe26045311e7c9972c26efbe3de2aeb4c135253114a0d8dc984e11954324364f",
+  "certified_codes_sha256": "e404b93e614be057301b6fcd1d72be277fcce3f78bae38be6fab38b8e9bac08c",
+  "certified_only_lsg_present": 32,
+  "certified_ward_codes": 16283,
+  "comparison_sha256": "da27d81cb9b261de1583c9720da7ccf9fdb3738b6fe240dbf9676232b41e1647",
+  "comparison_status": {
+    "both": 16249,
+    "candidate_only": 3,
+    "certified_only": 34
+  },
+  "lsg_comparison_sha256": "ccd9002c2dcdf8f7bca8b15bbc92fd76b09557d46543352643794810414d95a1",
+  "lsg_listing_sha256": "bfd5a44d21c0b84212b7f7673f1bd3861cd2aabd33bb19a7d4bf49f4492bfad9",
+  "manifest_sha256": "80e48fabe525eed6ce26f85eb3a69c2374a2901ca71c7cbe50cad1a7791c26c9",
+  "source_status": {
+    "failed": 5,
+    "ok": 10
+  },
+  "sources": [
+    {
+      "document_id": "2020_winners_kasaragod",
+      "number_position": {
+        "inline": 722,
+        "next_1": 36,
+        "previous_1": 5,
+        "previous_2": 1
+      },
+      "pages": 45,
+      "rows": 764,
+      "source_sha256": "3ab01d7a6c2808068f728cdd3d69375ca15d04364215732944326036fbbdbfe0",
+      "status": "ok"
+    },
+    {
+      "document_id": "2020_winners_kannur",
+      "number_position": {
+        "inline": 1292,
+        "next_1": 14,
+        "previous_1": 32
+      },
+      "pages": 66,
+      "rows": 1338,
+      "source_sha256": "02527a1425375b06cdb4e953c3745013106aacc459258127c47e45cb8534795f",
+      "status": "ok"
+    },
+    {
+      "document_id": "2020_winners_wayanad",
+      "rows": null,
+      "status": "failed"
+    },
+    {
+      "document_id": "2020_winners_kozhikode",
+      "rows": null,
+      "status": "failed"
+    },
+    {
+      "document_id": "2020_winners_malappuram",
+      "number_position": {
+        "inline": 1988,
+        "previous_1": 45
+      },
+      "pages": 92,
+      "rows": 2033,
+      "source_sha256": "797d7cbf2448377bd9263e018ae531ae770e535e17b68fd177a565cd86b7277b",
+      "status": "ok"
+    },
+    {
+      "document_id": "2020_winners_palakkad",
+      "number_position": {
+        "inline": 1680,
+        "previous_1": 23
+      },
+      "pages": 83,
+      "rows": 1703,
+      "source_sha256": "a157762ef645630b1bf2c5b82d9aa34f0aeae87735baf3a89b71b405b6e0cc7b",
+      "status": "ok"
+    },
+    {
+      "document_id": "2020_winners_thrissur",
+      "number_position": {
+        "inline": 1673,
+        "previous_1": 33,
+        "previous_2": 1
+      },
+      "pages": 92,
+      "rows": 1707,
+      "source_sha256": "7a2f75bb80be85623f90ce3ee0c0291ffbd5421cb4879dc5ad3a4630ed16c2cc",
+      "status": "ok"
+    },
+    {
+      "document_id": "2020_winners_ernakulam",
+      "number_position": {
+        "inline": 1479,
+        "previous_1": 70,
+        "previous_2": 1
+      },
+      "pages": 74,
+      "rows": 1550,
+      "source_sha256": "ff5b08ca26647397983454511fe5638d96456df7f855d2577e6c3ee0e9113ab8",
+      "status": "ok"
+    },
+    {
+      "document_id": "2020_winners_idukki",
+      "rows": null,
+      "status": "failed"
+    },
+    {
+      "document_id": "2020_winners_kottayam",
+      "number_position": {
+        "inline": 1251,
+        "next_1": 14,
+        "previous_1": 42,
+        "previous_2": 1
+      },
+      "pages": 71,
+      "rows": 1308,
+      "source_sha256": "b413ac03568c798bb52db9140014609cb1a4bfc518b6a716c0f37b47e4b3ef6e",
+      "status": "ok"
+    },
+    {
+      "document_id": "2020_winners_alappuzha",
+      "rows": null,
+      "status": "failed"
+    },
+    {
+      "document_id": "2020_winners_pathanamthitta",
+      "number_position": {
+        "inline": 901,
+        "previous_1": 9
+      },
+      "pages": 42,
+      "rows": 910,
+      "source_sha256": "166f855aaab160463d4763ff7aba93f59ddc4747fe8e8d4fabb1b660a8ede371",
+      "status": "ok"
+    },
+    {
+      "document_id": "2020_winners_kollam",
+      "rows": null,
+      "status": "failed"
+    },
+    {
+      "document_id": "2020_winners_thiruvananthapuram",
+      "number_position": {
+        "inline": 1468,
+        "previous_1": 10,
+        "previous_2": 2
+      },
+      "pages": 63,
+      "rows": 1480,
+      "source_sha256": "287fe7ec4b1d28bd96a73ead6f3d507f0fb941f4a163d2e0645391318c3df940",
+      "status": "ok"
+    },
+    {
+      "document_id": "2020_winners_urban",
+      "number_position": {
+        "inline": 3490
+      },
+      "pages": 46,
+      "rows": 3490,
+      "source_sha256": "70442b61e039f959de0f357150451383f93a0eb4bcd7435c4b50d5a791d3ebb3",
+      "status": "ok"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "document_id": "wayanad",
+  "errors": [
+    {
+      "error": "<urlopen error timed out>",
+      "error_type": "URLError",
+      "url": "https://www.sec.kerala.gov.in/public/elercd/download/f608617a-8af1-4b08-8712-71a1a16314e2"
+    }
+  ],
+  "finished_at": "2026-10-22T01:09:12.386370+00:00",
+  "status": "failed"
+}

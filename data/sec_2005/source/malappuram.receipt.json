@@ -1,0 +1,12 @@
+{
+  "document_id": "malappuram",
+  "errors": [
+    {
+      "error": "<urlopen error timed out>",
+      "error_type": "URLError",
+      "url": "https://www.sec.kerala.gov.in/public/elercd/download/65e6e4c4-6bc8-4978-8847-09a851a5222b"
+    }
+  ],
+  "finished_at": "2026-10-22T01:09:06.382169+00:00",
+  "status": "failed"
+}

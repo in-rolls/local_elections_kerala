@@ -1,7 +1,7 @@
 PY ?= uv run python
 RUFF ?= uv run ruff
 
-.PHONY: sync data lint verify data-summary check
+.PHONY: sync data lint test verify data-summary check
 
 sync:
 	uv sync --frozen --group dev
@@ -14,10 +14,13 @@ lint:
 	$(RUFF) check .
 	$(RUFF) format --check .
 
+test:
+	uv run pytest -q
+
 verify:
 	$(PY) -m local_elections_kerala.build.release verify
 
 data-summary:
 	$(PY) -m local_elections_kerala.build.release summary
 
-check: lint verify
+check: lint test verify

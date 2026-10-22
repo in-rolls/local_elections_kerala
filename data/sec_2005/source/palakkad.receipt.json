@@ -1,0 +1,12 @@
+{
+  "document_id": "palakkad",
+  "errors": [
+    {
+      "error": "<urlopen error timed out>",
+      "error_type": "URLError",
+      "url": "https://www.sec.kerala.gov.in/public/elercd/download/29ede753-eb43-4326-8bca-31c2959e05e4"
+    }
+  ],
+  "finished_at": "2026-10-22T01:09:00.378480+00:00",
+  "status": "failed"
+}

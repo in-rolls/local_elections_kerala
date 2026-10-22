@@ -80,7 +80,9 @@ SOURCES = (
 
 
 def schema(old=False):
-    fields = GEO + ([*OLD_DETAIL, "body_heading_raw"] if old else DETAIL)
+    fields = GEO + (
+        [*OLD_DETAIL, "body_heading_raw", "district_heading_raw"] if old else DETAIL
+    )
     return pa.schema(
         [pa.field(n, pa.int16() if n == "year" else pa.string()) for n in fields]
         + [
@@ -171,11 +173,23 @@ def old_rows(path):
             for key, value in zip(GEO + OLD_DETAIL, values, strict=True)
         }
         row["year"] = 2005
+        district_heading = heading.rpartition(",")[2].strip()
+        if not district_heading or district_heading == heading:
+            raise ValueError(f"{path}:{number}: heading has no district")
         row.update(
             body_heading_raw=heading,
+            district_heading_raw=district_heading,
             source_file=path.name,
             source_row=number,
-            quality_flags=[*flags(row), "reservation_not_collected"],
+            quality_flags=[
+                *flags(row),
+                "reservation_not_collected",
+                *(
+                    ["district_label_mismatch"]
+                    if row["district_raw"] != district_heading
+                    else []
+                ),
+            ],
         )
         result.append(row)
     if not result:

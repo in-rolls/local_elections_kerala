@@ -1,0 +1,12 @@
+{
+  "document_id": "thrissur",
+  "errors": [
+    {
+      "error": "<urlopen error timed out>",
+      "error_type": "URLError",
+      "url": "https://www.sec.kerala.gov.in/public/elercd/download/dd4389a4-e503-48b8-9bc9-acbc3b3244ff"
+    }
+  ],
+  "finished_at": "2026-10-22T01:08:54.374526+00:00",
+  "status": "failed"
+}

@@ -1,0 +1,12 @@
+{
+  "document_id": "kannur",
+  "errors": [
+    {
+      "error": "<urlopen error timed out>",
+      "error_type": "URLError",
+      "url": "https://www.sec.kerala.gov.in/public/elercd/download/8ffdec19-83e1-44b3-8a86-5fc323e0fbb4"
+    }
+  ],
+  "finished_at": "2026-10-22T01:09:18.390751+00:00",
+  "status": "failed"
+}

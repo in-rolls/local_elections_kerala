@@ -1,0 +1,62 @@
+{
+  "checked_at": "2026-10-22T01:45:32.951269+00:00",
+  "queries": [
+    {
+      "captures": [],
+      "cdx_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fsec.kerala.gov.in%2Fpublic%2Felercd%2Fdownload%2Facf73770-3e3e-4443-9ec8-642b06b00312&output=json&filter=statuscode%3A200",
+      "source_url": "http://sec.kerala.gov.in/public/elercd/download/acf73770-3e3e-4443-9ec8-642b06b00312",
+      "status": "ok",
+      "year": "2010"
+    },
+    {
+      "captures": [],
+      "cdx_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fwww.sec.kerala.gov.in%2Fpublic%2Felercd%2Fdownload%2Facf73770-3e3e-4443-9ec8-642b06b00312&output=json&filter=statuscode%3A200",
+      "source_url": "http://www.sec.kerala.gov.in/public/elercd/download/acf73770-3e3e-4443-9ec8-642b06b00312",
+      "status": "ok",
+      "year": "2010"
+    },
+    {
+      "captures": [],
+      "cdx_query": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsec.kerala.gov.in%2Fpublic%2Felercd%2Fdownload%2Facf73770-3e3e-4443-9ec8-642b06b00312&output=json&filter=statuscode%3A200",
+      "source_url": "https://sec.kerala.gov.in/public/elercd/download/acf73770-3e3e-4443-9ec8-642b06b00312",
+      "status": "ok",
+      "year": "2010"
+    },
+    {
+      "captures": [],
+      "cdx_query": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.sec.kerala.gov.in%2Fpublic%2Felercd%2Fdownload%2Facf73770-3e3e-4443-9ec8-642b06b00312&output=json&filter=statuscode%3A200",
+      "source_url": "https://www.sec.kerala.gov.in/public/elercd/download/acf73770-3e3e-4443-9ec8-642b06b00312",
+      "status": "ok",
+      "year": "2010"
+    },
+    {
+      "captures": [],
+      "cdx_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fsec.kerala.gov.in%2Fpublic%2Felercd%2Fdownload%2Fb63508bc-4827-4f50-8365-6ef6ff256f50&output=json&filter=statuscode%3A200",
+      "source_url": "http://sec.kerala.gov.in/public/elercd/download/b63508bc-4827-4f50-8365-6ef6ff256f50",
+      "status": "ok",
+      "year": "2015"
+    },
+    {
+      "captures": [],
+      "cdx_query": "https://web.archive.org/cdx/search/cdx?url=http%3A%2F%2Fwww.sec.kerala.gov.in%2Fpublic%2Felercd%2Fdownload%2Fb63508bc-4827-4f50-8365-6ef6ff256f50&output=json&filter=statuscode%3A200",
+      "source_url": "http://www.sec.kerala.gov.in/public/elercd/download/b63508bc-4827-4f50-8365-6ef6ff256f50",
+      "status": "ok",
+      "year": "2015"
+    },
+    {
+      "captures": [],
+      "cdx_query": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fsec.kerala.gov.in%2Fpublic%2Felercd%2Fdownload%2Fb63508bc-4827-4f50-8365-6ef6ff256f50&output=json&filter=statuscode%3A200",
+      "source_url": "https://sec.kerala.gov.in/public/elercd/download/b63508bc-4827-4f50-8365-6ef6ff256f50",
+      "status": "ok",
+      "year": "2015"
+    },
+    {
+      "captures": [],
+      "cdx_query": "https://web.archive.org/cdx/search/cdx?url=https%3A%2F%2Fwww.sec.kerala.gov.in%2Fpublic%2Felercd%2Fdownload%2Fb63508bc-4827-4f50-8365-6ef6ff256f50&output=json&filter=statuscode%3A200",
+      "source_url": "https://www.sec.kerala.gov.in/public/elercd/download/b63508bc-4827-4f50-8365-6ef6ff256f50",
+      "status": "ok",
+      "year": "2015"
+    }
+  ],
+  "service": "Internet Archive CDX"
+}

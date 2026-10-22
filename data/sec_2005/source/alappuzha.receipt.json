@@ -1,0 +1,12 @@
+{
+  "document_id": "alappuzha",
+  "errors": [
+    {
+      "error": "<urlopen error timed out>",
+      "error_type": "URLError",
+      "url": "https://www.sec.kerala.gov.in/public/elercd/download/d5bed80e-0c9f-411d-8d5e-a46683bd02df"
+    }
+  ],
+  "finished_at": "2026-10-22T01:08:30.357686+00:00",
+  "status": "failed"
+}

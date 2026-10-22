@@ -1,0 +1,12 @@
+{
+  "document_id": "2010_candidates",
+  "errors": [
+    {
+      "error": "<urlopen error timed out>",
+      "error_type": "URLError",
+      "url": "https://sec.kerala.gov.in/public/elercd/download/acf73770-3e3e-4443-9ec8-642b06b00312"
+    }
+  ],
+  "finished_at": "2026-10-22T01:21:11.326618+00:00",
+  "status": "failed"
+}

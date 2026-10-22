@@ -30,7 +30,7 @@
     {
       "file": "kerala_2005.parquet",
       "rows": 20551,
-      "sha256": "35799a0e6615b7e2f536ab7bf6927d98c0e39775dd22bab424da3df822f79321",
+      "sha256": "58d2e639dee5e72b915c9756572804c060e5073bc8fa0a3540f23beec29266e1",
       "schema": [
         {
           "name": "year",
@@ -89,6 +89,11 @@
         },
         {
           "name": "body_heading_raw",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "district_heading_raw",
           "type": "string",
           "nullable": true
         },
