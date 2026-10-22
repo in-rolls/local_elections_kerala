@@ -1,0 +1,84 @@
+{
+  "2010_saved_html": {
+    "comparison_sha256": "ec8048124d1b97c228117a707d14a675e96a0cfb111cc8e46e06a4ef99deda1c",
+    "match_status": {
+      "joined": 15841
+    },
+    "member_equal": 15841,
+    "party_equal": 15841,
+    "rows": 15841,
+    "source_sha256": "99b211fe47d331adf48cdd75571ea517a4ec421f509df5a693899b5e97de8f87"
+  },
+  "years": {
+    "2010": {
+      "duplicate_non_district_body_ward_keys": 0,
+      "empty_listing_name": 0,
+      "empty_party": 0,
+      "empty_reservation": 0,
+      "listing_profile_ward_mismatch": 0,
+      "rows": 21607,
+      "sources": [
+        {
+          "file": "raw/lsg_scrape/2010_2020_combined.csv",
+          "sha256": "b7772cf45b3f27d7160c6a8f1209df793281fdcf009a46a03687272d8826fdd0"
+        }
+      ],
+      "tiers": {
+        "Block": 2078,
+        "Corporation": 359,
+        "District": 331,
+        "Grama Panchayat": 16641,
+        "Municipality": 2198
+      },
+      "woman_reserved_male_profile": 33
+    },
+    "2015": {
+      "duplicate_non_district_body_ward_keys": 0,
+      "empty_listing_name": 0,
+      "empty_party": 0,
+      "empty_reservation": 0,
+      "listing_profile_ward_mismatch": 0,
+      "rows": 21803,
+      "sources": [
+        {
+          "file": "raw/lsg_scrape/2015_part1.csv",
+          "sha256": "c7cb363b684601c97d31ff164b6c96b669cb807695a2ec073057ce1ead81e56c"
+        },
+        {
+          "file": "raw/lsg_scrape/2015_part2_resumed_malappuram.csv",
+          "sha256": "e0add32068003cc5c7ab69302002bb1267a38f002586d9acd112b3aec9536357"
+        }
+      ],
+      "tiers": {
+        "Block": 2062,
+        "Corporation": 412,
+        "District": 331,
+        "Grama Panchayat": 15921,
+        "Municipality": 3077
+      },
+      "woman_reserved_male_profile": 51
+    },
+    "2020": {
+      "duplicate_non_district_body_ward_keys": 0,
+      "empty_listing_name": 0,
+      "empty_party": 0,
+      "empty_reservation": 0,
+      "listing_profile_ward_mismatch": 0,
+      "rows": 21886,
+      "sources": [
+        {
+          "file": "raw/lsg_scrape/2020.csv",
+          "sha256": "bfd5a44d21c0b84212b7f7673f1bd3861cd2aabd33bb19a7d4bf49f4492bfad9"
+        }
+      ],
+      "tiers": {
+        "Block": 2078,
+        "Corporation": 414,
+        "District": 331,
+        "Grama Panchayat": 15952,
+        "Municipality": 3111
+      },
+      "woman_reserved_male_profile": 197
+    }
+  }
+}

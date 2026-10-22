@@ -1,0 +1,275 @@
+{
+  "format_version": 1,
+  "sources": [
+    {
+      "file": "data/raw/lsg_scrape/2005.csv",
+      "sha256": "7761384684ac8a6526e31bf8db13558f8e31823d96cbdf3aaa2c0ac15070a881"
+    },
+    {
+      "file": "data/raw/lsg_scrape/2010_2020_combined.csv",
+      "sha256": "b7772cf45b3f27d7160c6a8f1209df793281fdcf009a46a03687272d8826fdd0"
+    },
+    {
+      "file": "data/raw/lsg_scrape/2015_part1.csv",
+      "sha256": "c7cb363b684601c97d31ff164b6c96b669cb807695a2ec073057ce1ead81e56c"
+    },
+    {
+      "file": "data/raw/lsg_scrape/2015_part2_resumed_malappuram.csv",
+      "sha256": "e0add32068003cc5c7ab69302002bb1267a38f002586d9acd112b3aec9536357"
+    },
+    {
+      "file": "data/raw/lsg_scrape/2020.csv",
+      "sha256": "bfd5a44d21c0b84212b7f7673f1bd3861cd2aabd33bb19a7d4bf49f4492bfad9"
+    }
+  ],
+  "excluded_2005_structural_rows": {
+    "body_heading": 1223,
+    "column_header": 1223
+  },
+  "files": [
+    {
+      "file": "kerala_2005.parquet",
+      "rows": 20551,
+      "sha256": "8c751275b86dac610b88000cc0f3e4af9b1059caecf1d0cd2eb0d276a6b16a94",
+      "schema": [
+        {
+          "name": "year",
+          "type": "int16",
+          "nullable": true
+        },
+        {
+          "name": "lgi_type",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "district_raw",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "block_raw",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "municipality_raw",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "corporation_raw",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "grama_panchayat_raw",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "ward_no_raw",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "elected_member_raw",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "front_raw",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "votes_raw",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "body_heading_raw",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "district_heading_raw",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "source_file",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "source_row",
+          "type": "int32",
+          "nullable": false
+        },
+        {
+          "name": "quality_flags",
+          "type": "list<element: string>",
+          "nullable": false
+        }
+      ]
+    },
+    {
+      "file": "kerala_2010_2020.parquet",
+      "rows": 65296,
+      "sha256": "e94e3988abede6b1cfe5de723a5d499f0b5adf0533cfdf03b435939e05cc0c20",
+      "schema": [
+        {
+          "name": "year",
+          "type": "int16",
+          "nullable": true
+        },
+        {
+          "name": "lgi_type",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "district_raw",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "block_raw",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "municipality_raw",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "corporation_raw",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "grama_panchayat_raw",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "ward_no_raw",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "ward_name_raw",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "elected_member_raw",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "role_raw",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "party_raw",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "reserved_raw",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "profile_ward_no_raw",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "profile_ward_name_raw",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "member_name_raw",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "address_raw",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "phone_raw",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "mobile_raw",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "age_raw",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "winner_woman_raw",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "marital_status_raw",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "education_raw",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "occupation_raw",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "image_url",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "district_inferred",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "district_inferred_method",
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "name": "source_file",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "source_row",
+          "type": "int32",
+          "nullable": false
+        },
+        {
+          "name": "quality_flags",
+          "type": "list<element: string>",
+          "nullable": false
+        }
+      ]
+    }
+  ]
+}

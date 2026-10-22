@@ -1,0 +1,2354 @@
+{
+  "candidate_rows": 4798,
+  "document_id": "kozhikode",
+  "elected": 1659,
+  "issues": [
+    {
+      "key": [
+        "Block",
+        127,
+        8
+      ],
+      "page": 6,
+      "party": "",
+      "problem": "bad_candidate_fields",
+      "status": "Elected",
+      "votes": "3855"
+    },
+    {
+      "key": [
+        "Corporation",
+        5,
+        48
+      ],
+      "page": 44,
+      "party": "",
+      "problem": "bad_candidate_fields",
+      "status": "Non Elected",
+      "votes": "257"
+    },
+    {
+      "key": [
+        "Corporation",
+        5,
+        51
+      ],
+      "page": 45,
+      "party": "",
+      "problem": "bad_candidate_fields",
+      "status": "Non Elected",
+      "votes": "4"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        2,
+        9
+      ],
+      "page": 58,
+      "party": "",
+      "problem": "bad_candidate_fields",
+      "status": "Non Elected",
+      "votes": "376"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        4,
+        3
+      ],
+      "page": 63,
+      "party": "",
+      "problem": "bad_candidate_fields",
+      "status": "Non Elected",
+      "votes": "156"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        5,
+        14
+      ],
+      "page": 67,
+      "problem": "bad_ward_totals"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        9,
+        6
+      ],
+      "page": 75,
+      "party": "",
+      "problem": "bad_candidate_fields",
+      "status": "Elected",
+      "votes": "424"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        12,
+        2
+      ],
+      "page": 82,
+      "problem": "bad_ward_totals"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        23,
+        6
+      ],
+      "page": 115,
+      "problem": "bad_ward_totals"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        23,
+        7
+      ],
+      "page": 115,
+      "party": "",
+      "problem": "bad_candidate_fields",
+      "status": "Non Elected",
+      "votes": "229"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        24,
+        1
+      ],
+      "page": 116,
+      "problem": "missing_candidate_name"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        24,
+        3
+      ],
+      "page": 117,
+      "party": "",
+      "problem": "bad_candidate_fields",
+      "status": "Non Elected",
+      "votes": "308"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        30,
+        11
+      ],
+      "page": 139,
+      "party": "",
+      "problem": "bad_candidate_fields",
+      "status": "Non Elected",
+      "votes": "111"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        31,
+        6
+      ],
+      "page": 141,
+      "party": "",
+      "problem": "bad_candidate_fields",
+      "status": "Non Elected",
+      "votes": "160"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        32,
+        8
+      ],
+      "page": 144,
+      "problem": "bad_ward_totals"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        33,
+        3
+      ],
+      "page": 145,
+      "party": "",
+      "problem": "bad_candidate_fields",
+      "status": "Elected",
+      "votes": "490"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        33,
+        7
+      ],
+      "page": 146,
+      "party": "",
+      "problem": "bad_candidate_fields",
+      "status": "Non Elected",
+      "votes": "8"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        34,
+        2
+      ],
+      "page": 148,
+      "party": "",
+      "problem": "bad_candidate_fields",
+      "status": "Elected",
+      "votes": "804"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        35,
+        8
+      ],
+      "page": 152,
+      "problem": "bad_ward_totals"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        37,
+        2
+      ],
+      "page": 157,
+      "problem": "bad_ward_totals"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        38,
+        17
+      ],
+      "page": 162,
+      "problem": "bad_ward_totals"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        40,
+        10
+      ],
+      "page": 168,
+      "problem": "bad_ward_totals"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        40,
+        10
+      ],
+      "page": 169,
+      "problem": "bad_ward_totals"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        49,
+        11
+      ],
+      "page": 199,
+      "party": "",
+      "problem": "bad_candidate_fields",
+      "status": "Elected",
+      "votes": "480"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        54,
+        11
+      ],
+      "page": 216,
+      "party": "",
+      "problem": "bad_candidate_fields",
+      "status": "Elected",
+      "votes": "581"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        55,
+        4
+      ],
+      "page": 217,
+      "party": "",
+      "problem": "bad_candidate_fields",
+      "status": "Non Elected",
+      "votes": "58"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        58,
+        14
+      ],
+      "page": 229,
+      "party": "",
+      "problem": "bad_candidate_fields",
+      "status": "Non Elected",
+      "votes": "391"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        69,
+        14
+      ],
+      "page": 274,
+      "party": "",
+      "problem": "bad_candidate_fields",
+      "status": "Non Elected",
+      "votes": "133"
+    },
+    {
+      "key": [
+        "Municipality",
+        44,
+        13
+      ],
+      "page": 322,
+      "party": "",
+      "problem": "bad_candidate_fields",
+      "status": "Elected",
+      "votes": "615"
+    },
+    {
+      "key": [
+        "Municipality",
+        44,
+        20
+      ],
+      "page": 323,
+      "party": "",
+      "problem": "bad_candidate_fields",
+      "status": "Non Elected",
+      "votes": "44"
+    },
+    {
+      "key": [
+        "Municipality",
+        44,
+        32
+      ],
+      "page": 325,
+      "party": "",
+      "problem": "bad_candidate_fields",
+      "status": "Non Elected",
+      "votes": "23"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        5,
+        14
+      ],
+      "problem": "invalid_vote_cell"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        12,
+        2
+      ],
+      "problem": "invalid_vote_cell"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        23,
+        6
+      ],
+      "problem": "invalid_vote_cell"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        32,
+        8
+      ],
+      "problem": "invalid_vote_cell"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        35,
+        8
+      ],
+      "problem": "invalid_vote_cell"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        37,
+        2
+      ],
+      "problem": "invalid_vote_cell"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        38,
+        17
+      ],
+      "problem": "invalid_vote_cell"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        40,
+        10
+      ],
+      "problem": "invalid_vote_cell"
+    },
+    {
+      "cast": 710,
+      "key": [
+        "Grama Panchayat",
+        67,
+        2
+      ],
+      "problem": "candidate_vote_sum",
+      "valid": 1044
+    }
+  ],
+  "issues_by_type": {
+    "bad_candidate_fields": 21,
+    "bad_ward_totals": 9,
+    "candidate_vote_sum": 1,
+    "invalid_vote_cell": 8,
+    "missing_candidate_name": 1
+  },
+  "output_sha256": "890ab9c69b07fa38d9fbaacc95b4feb5d72194c41ab1d32b226d86a9ba215db2",
+  "source_pages": 328,
+  "source_sha256": "9a53c94b2911193e60a0e537a88fbf900beea0a8b2cd6e0da76f1a5721de6b85",
+  "validated_wards": 1628,
+  "wards": 1659,
+  "warnings": [
+    {
+      "key": [
+        "Block",
+        127,
+        4
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Block",
+        127,
+        6
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Block",
+        127,
+        7
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Block",
+        135,
+        12
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Corporation",
+        5,
+        6
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Corporation",
+        5,
+        9
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Corporation",
+        5,
+        13
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Corporation",
+        5,
+        19
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Corporation",
+        5,
+        20
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Corporation",
+        5,
+        22
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Corporation",
+        5,
+        23
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Corporation",
+        5,
+        24
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Corporation",
+        5,
+        26
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Corporation",
+        5,
+        27
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Corporation",
+        5,
+        28
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Corporation",
+        5,
+        29
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Corporation",
+        5,
+        31
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Corporation",
+        5,
+        32
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Corporation",
+        5,
+        34
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Corporation",
+        5,
+        35
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Corporation",
+        5,
+        36
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Corporation",
+        5,
+        37
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Corporation",
+        5,
+        39
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Corporation",
+        5,
+        40
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Corporation",
+        5,
+        41
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Corporation",
+        5,
+        43
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Corporation",
+        5,
+        44
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Corporation",
+        5,
+        45
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Corporation",
+        5,
+        47
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Corporation",
+        5,
+        48
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Corporation",
+        5,
+        49
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Corporation",
+        5,
+        51
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Corporation",
+        5,
+        52
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Corporation",
+        5,
+        54
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Corporation",
+        5,
+        55
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "District Panchayat",
+        11,
+        5
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        1,
+        15
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        2,
+        4
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        2,
+        10
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        2,
+        12
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        3,
+        12
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        3,
+        15
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        3,
+        17
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        4,
+        10
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        4,
+        11
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        5,
+        1
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        7,
+        3
+      ],
+      "problem": "missing_geography"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        7,
+        5
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        7,
+        10
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        8,
+        6
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        8,
+        8
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        9,
+        4
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        9,
+        12
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        10,
+        4
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        12,
+        1
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        12,
+        8
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        12,
+        11
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        13,
+        6
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        13,
+        14
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        16,
+        9
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        16,
+        11
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        17,
+        6
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        17,
+        15
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        19,
+        8
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        20,
+        13
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        21,
+        3
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        21,
+        4
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        21,
+        18
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        22,
+        5
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        22,
+        8
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        22,
+        12
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        22,
+        13
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        22,
+        17
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        22,
+        18
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        23,
+        1
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        23,
+        4
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        24,
+        1
+      ],
+      "problem": "missing_geography"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        24,
+        9
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        25,
+        6
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        26,
+        17
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        26,
+        19
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        28,
+        3
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        28,
+        7
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        28,
+        9
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        30,
+        15
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        31,
+        11
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        32,
+        4
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        32,
+        11
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        33,
+        10
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        33,
+        10
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        33,
+        18
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        34,
+        4
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        35,
+        7
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        35,
+        13
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        36,
+        6
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        36,
+        7
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        36,
+        10
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        37,
+        5
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        38,
+        2
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        38,
+        5
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        38,
+        16
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        38,
+        18
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        39,
+        17
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        39,
+        18
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        41,
+        4
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        41,
+        5
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        41,
+        13
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        41,
+        14
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        42,
+        9
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        43,
+        1
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        43,
+        11
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        44,
+        11
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        45,
+        9
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        45,
+        10
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        45,
+        13
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        46,
+        3
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        46,
+        5
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        46,
+        8
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        46,
+        10
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        46,
+        15
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        47,
+        10
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        48,
+        14
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        48,
+        15
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        49,
+        6
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        49,
+        9
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        50,
+        5
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        50,
+        11
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        52,
+        4
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        52,
+        21
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        53,
+        9
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        53,
+        9
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        53,
+        12
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        54,
+        8
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        54,
+        9
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        57,
+        5
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        59,
+        13
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        60,
+        2
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        60,
+        8
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        60,
+        9
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        60,
+        13
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        61,
+        8
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        62,
+        1
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        62,
+        1
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        62,
+        12
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        62,
+        13
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        62,
+        15
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        63,
+        1
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        63,
+        5
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        63,
+        13
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        64,
+        13
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        65,
+        2
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        65,
+        6
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        65,
+        9
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        66,
+        9
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        67,
+        5
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        68,
+        19
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        70,
+        7
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        70,
+        10
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        70,
+        13
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        70,
+        14
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        70,
+        18
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        71,
+        13
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        72,
+        4
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        72,
+        13
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        72,
+        21
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        73,
+        3
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        73,
+        14
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        74,
+        13
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        74,
+        17
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        75,
+        3
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        76,
+        5
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        76,
+        20
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        77,
+        5
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        77,
+        5
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        77,
+        6
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        77,
+        18
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        78,
+        7
+      ],
+      "problem": "source_polled_votes_unreadable"
+    },
+    {
+      "key": [
+        "Grama Panchayat",
+        78,
+        13
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Municipality",
+        43,
+        2
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Municipality",
+        43,
+        3
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Municipality",
+        43,
+        4
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Municipality",
+        43,
+        5
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Municipality",
+        43,
+        7
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Municipality",
+        43,
+        8
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Municipality",
+        43,
+        9
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Municipality",
+        43,
+        10
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Municipality",
+        43,
+        11
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Municipality",
+        43,
+        12
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Municipality",
+        43,
+        14
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Municipality",
+        43,
+        15
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Municipality",
+        43,
+        16
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Municipality",
+        43,
+        17
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Municipality",
+        43,
+        19
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Municipality",
+        43,
+        20
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Municipality",
+        43,
+        27
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Municipality",
+        43,
+        28
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Municipality",
+        43,
+        29
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Municipality",
+        43,
+        30
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Municipality",
+        43,
+        32
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Municipality",
+        43,
+        33
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Municipality",
+        43,
+        34
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Municipality",
+        43,
+        35
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Municipality",
+        43,
+        36
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Municipality",
+        43,
+        38
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Municipality",
+        43,
+        39
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Municipality",
+        43,
+        40
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Municipality",
+        43,
+        41
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Municipality",
+        44,
+        1
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Municipality",
+        44,
+        3
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Municipality",
+        44,
+        4
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Municipality",
+        44,
+        5
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Municipality",
+        44,
+        6
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Municipality",
+        44,
+        8
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Municipality",
+        44,
+        9
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Municipality",
+        44,
+        10
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Municipality",
+        44,
+        11
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Municipality",
+        44,
+        12
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Municipality",
+        44,
+        14
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Municipality",
+        44,
+        17
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Municipality",
+        44,
+        19
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Municipality",
+        44,
+        20
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Municipality",
+        44,
+        21
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Municipality",
+        44,
+        22
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Municipality",
+        44,
+        24
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Municipality",
+        44,
+        25
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Municipality",
+        44,
+        26
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Municipality",
+        44,
+        29
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Municipality",
+        44,
+        30
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Municipality",
+        44,
+        31
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Municipality",
+        44,
+        33
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Municipality",
+        44,
+        34
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Municipality",
+        44,
+        35
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Municipality",
+        44,
+        36
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Municipality",
+        44,
+        38
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Municipality",
+        44,
+        39
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Municipality",
+        44,
+        40
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Municipality",
+        44,
+        42
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Municipality",
+        44,
+        43
+      ],
+      "problem": "source_invalid_votes_blank"
+    },
+    {
+      "key": [
+        "Municipality",
+        44,
+        44
+      ],
+      "problem": "source_invalid_votes_blank"
+    }
+  ],
+  "warnings_by_type": {
+    "missing_geography": 2,
+    "source_invalid_votes_blank": 155,
+    "source_polled_votes_unreadable": 82
+  }
+}

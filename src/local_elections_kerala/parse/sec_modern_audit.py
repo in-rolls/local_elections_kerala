@@ -1,6 +1,5 @@
 """Audit the retained 2010, 2015, and 2020 LSG profile collections."""
 
-import csv
 import hashlib
 import json
 import re
@@ -8,14 +7,18 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 from local_elections_kerala.parse.to_parquet import modern_rows
+from local_elections_kerala.tables import read_rows, write_rows
 
 ROOT = Path(__file__).resolve().parents[3]
 DATA = ROOT / "data"
-OUT = DATA / "sec_modern/derived"
+OUT = DATA / "interim/sec/modern"
 SOURCES = {
-    2010: ["lsgi-election-kerala.csv"],
-    2015: ["lsgi-election-kerala-2015.csv", "lsgi-election-kerala-2015-fix.csv"],
-    2020: ["lsgi-election-kerala-2020.csv"],
+    2010: ["raw/lsg_scrape/2010_2020_combined.csv"],
+    2015: [
+        "raw/lsg_scrape/2015_part1.csv",
+        "raw/lsg_scrape/2015_part2_resumed_malappuram.csv",
+    ],
+    2020: ["raw/lsg_scrape/2020.csv"],
 }
 BODY_FIELD = {
     "Block": "block_raw",
@@ -103,9 +106,8 @@ def main():
         key = body_key(row)
         if key:
             profile_index[key].append(row)
-    saved = OUT / "2010_saved_ward_listings.csv"
-    with saved.open(newline="", encoding="utf-8") as stream:
-        saved_rows = list(csv.DictReader(stream))
+    saved = OUT / "2010_saved_ward_listings.parquet"
+    saved_rows = read_rows(saved)
     comparison = []
     for row in saved_rows:
         tier, body = saved_body(row["body_heading_raw"])
@@ -156,11 +158,8 @@ def main():
                 match["party_raw"]
             )
         comparison.append(result)
-    output = OUT / "2010_saved_comparison.csv"
-    with output.open("w", newline="", encoding="utf-8") as stream:
-        writer = csv.DictWriter(stream, fieldnames=COMPARE_FIELDS)
-        writer.writeheader()
-        writer.writerows(comparison)
+    output = OUT / "2010_saved_comparison.parquet"
+    write_rows(output, comparison, COMPARE_FIELDS)
     audit["2010_saved_html"] = {
         "source_sha256": sha256(saved),
         "comparison_sha256": sha256(output),

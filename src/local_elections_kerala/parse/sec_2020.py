@@ -1,7 +1,6 @@
 """Extract candidate votes from the retained 2020 SEC PDF using Poppler text layout."""
 
 import argparse
-import csv
 import hashlib
 import json
 import re
@@ -9,9 +8,11 @@ import subprocess
 from collections import Counter, defaultdict
 from pathlib import Path
 
+from local_elections_kerala.tables import write_rows
+
 ROOT = Path(__file__).resolve().parents[3]
-SOURCE = ROOT / "data/sec_modern/source/2020_candidates.pdf"
-OUT = ROOT / "data/sec_modern/derived"
+SOURCE = ROOT / "data/raw/sec/modern_candidates/2020_candidates.pdf"
+OUT = ROOT / "data/interim/sec/modern"
 CANDIDATE_START = re.compile(r"^\s*([A-Z]+)\s+([A-Z]\d{5})\s+")
 WARD_CODE = re.compile(r"\b([A-Z]\d{8})\b")
 TRAILING_NUMBER = re.compile(r"\s{2,}(\d{1,7})\s*$")
@@ -164,13 +165,6 @@ def winners(records):
     return result
 
 
-def write_csv(path, fields, rows):
-    with path.open("w", newline="", encoding="utf-8") as stream:
-        writer = csv.DictWriter(stream, fieldnames=fields)
-        writer.writeheader()
-        writer.writerows(rows)
-
-
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--source", type=Path, default=SOURCE)
@@ -201,12 +195,12 @@ def main():
         raise ValueError("No candidate rows found")
     winner_rows = winners(records)
     args.out.mkdir(parents=True, exist_ok=True)
-    candidates_file = args.out / "2020_candidates.csv"
-    winners_file = args.out / "2020_vote_leaders.csv"
-    write_csv(candidates_file, CANDIDATE_FIELDS, records)
-    write_csv(winners_file, WINNER_FIELDS, winner_rows)
+    candidates_file = args.out / "2020_candidates.parquet"
+    winners_file = args.out / "2020_vote_leaders.parquet"
+    write_rows(candidates_file, records, CANDIDATE_FIELDS)
+    write_rows(winners_file, winner_rows, WINNER_FIELDS)
     audit = {
-        "source_file": str(args.source),
+        "source_file": str(args.source.resolve().relative_to(ROOT)),
         "source_sha256": sha256(args.source),
         "pdf_pages": pdf_pages,
         "pages_with_candidates": pages_with_candidates,
@@ -217,8 +211,8 @@ def main():
         ),
         "winner_status": dict(Counter(row["winner_status"] for row in winner_rows)),
         "zero_top_votes": sum(row["top_votes"] == 0 for row in winner_rows),
-        "candidate_csv_sha256": sha256(candidates_file),
-        "vote_leaders_csv_sha256": sha256(winners_file),
+        "candidates_sha256": sha256(candidates_file),
+        "vote_leaders_sha256": sha256(winners_file),
         "parser": "pdftotext -layout -enc UTF-8",
     }
     (args.out / "2020_parse.audit.json").write_text(

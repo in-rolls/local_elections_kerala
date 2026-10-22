@@ -1,0 +1,20 @@
+{
+  "candidate_field_status": {
+    "complete": 73824,
+    "partial": 869
+  },
+  "candidate_rows": 74693,
+  "candidates_sha256": "7c0ca3355183fc1ee60859407b62d3ddbbd8f594f1d8078593d443ce5e30bbc9",
+  "pages_with_candidates": 1803,
+  "parser": "pdftotext -layout -enc UTF-8",
+  "pdf_pages": 1803,
+  "source_file": "data/raw/sec/modern_candidates/2020_candidates.pdf",
+  "source_sha256": "664bd7501ff9c203fee58395f531e0f3839c5e9ad9ab6ba523c55913f310667d",
+  "vote_leaders_sha256": "fb1d0805667c281cbc4aeb44e4e8b108c0d9ebc1ffb9a1d4da878bbb315e7a3d",
+  "ward_rows": 21821,
+  "winner_status": {
+    "tied_max": 39,
+    "unique_max": 21782
+  },
+  "zero_top_votes": 25
+}
