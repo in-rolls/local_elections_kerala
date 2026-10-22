@@ -1,0 +1,12 @@
+{
+  "document_id": "kottayam",
+  "errors": [
+    {
+      "error": "<urlopen error timed out>",
+      "error_type": "URLError",
+      "url": "https://www.sec.kerala.gov.in/public/elercd/download/3a4207ab-711e-4da6-95a7-609a1d0dfac9"
+    }
+  ],
+  "finished_at": "2026-10-22T01:08:36.361609+00:00",
+  "status": "failed"
+}

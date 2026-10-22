@@ -1,0 +1,12 @@
+{
+  "document_id": "2020_winners_wayanad",
+  "errors": [
+    {
+      "error": "<urlopen error timed out>",
+      "error_type": "URLError",
+      "url": "https://sec.kerala.gov.in/public/elercd/download/81a2c0bd-0e72-44d3-867b-330438306c61"
+    }
+  ],
+  "finished_at": "2026-10-22T01:37:51.084376+00:00",
+  "status": "failed"
+}

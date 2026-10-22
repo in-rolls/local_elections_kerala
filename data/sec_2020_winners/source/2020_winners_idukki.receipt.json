@@ -1,0 +1,12 @@
+{
+  "document_id": "2020_winners_idukki",
+  "errors": [
+    {
+      "error": "<urlopen error timed out>",
+      "error_type": "URLError",
+      "url": "https://sec.kerala.gov.in/public/elercd/download/66636ecb-7196-4808-8b4f-5b4891a88b51"
+    }
+  ],
+  "finished_at": "2026-10-22T01:38:27.325520+00:00",
+  "status": "failed"
+}

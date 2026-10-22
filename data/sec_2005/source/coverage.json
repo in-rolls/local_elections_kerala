@@ -1,0 +1,130 @@
+{
+  "counts": {
+    "failed": 13,
+    "ok": 2
+  },
+  "documents": [
+    {
+      "district": "Thiruvananthapuram",
+      "document_id": "thiruvananthapuram",
+      "kind": "district_report",
+      "page_count": 438,
+      "sha256": "b36316f473302b15354817830d938e6d97bcfc2a0fb7c4dae98e64b379df3216",
+      "status": "ok"
+    },
+    {
+      "district": "Kollam",
+      "document_id": "kollam",
+      "kind": "district_report",
+      "page_count": null,
+      "sha256": null,
+      "status": "failed"
+    },
+    {
+      "district": "Pathanamthitta",
+      "document_id": "pathanamthitta",
+      "kind": "district_report",
+      "page_count": null,
+      "sha256": null,
+      "status": "failed"
+    },
+    {
+      "district": "Alappuzha",
+      "document_id": "alappuzha",
+      "kind": "district_report",
+      "page_count": null,
+      "sha256": null,
+      "status": "failed"
+    },
+    {
+      "district": "Kottayam",
+      "document_id": "kottayam",
+      "kind": "district_report",
+      "page_count": null,
+      "sha256": null,
+      "status": "failed"
+    },
+    {
+      "district": "Idukki",
+      "document_id": "idukki",
+      "kind": "district_report",
+      "page_count": null,
+      "sha256": null,
+      "status": "failed"
+    },
+    {
+      "district": "Ernakulam",
+      "document_id": "ernakulam",
+      "kind": "district_report",
+      "page_count": null,
+      "sha256": null,
+      "status": "failed"
+    },
+    {
+      "district": "Thrissur",
+      "document_id": "thrissur",
+      "kind": "district_report",
+      "page_count": null,
+      "sha256": null,
+      "status": "failed"
+    },
+    {
+      "district": "Palakkad",
+      "document_id": "palakkad",
+      "kind": "district_report",
+      "page_count": null,
+      "sha256": null,
+      "status": "failed"
+    },
+    {
+      "district": "Malappuram",
+      "document_id": "malappuram",
+      "kind": "district_report",
+      "page_count": null,
+      "sha256": null,
+      "status": "failed"
+    },
+    {
+      "district": "Kozhikode",
+      "document_id": "kozhikode",
+      "kind": "district_report",
+      "page_count": 328,
+      "sha256": "9a53c94b2911193e60a0e537a88fbf900beea0a8b2cd6e0da76f1a5721de6b85",
+      "status": "ok"
+    },
+    {
+      "district": "Wayanad",
+      "document_id": "wayanad",
+      "kind": "district_report",
+      "page_count": null,
+      "sha256": null,
+      "status": "failed"
+    },
+    {
+      "district": "Kannur",
+      "document_id": "kannur",
+      "kind": "district_report",
+      "page_count": null,
+      "sha256": null,
+      "status": "failed"
+    },
+    {
+      "district": "Kasaragod",
+      "document_id": "kasaragod",
+      "kind": "district_report",
+      "page_count": null,
+      "sha256": null,
+      "status": "failed"
+    },
+    {
+      "district": "Kerala",
+      "document_id": "heads",
+      "kind": "head_elections",
+      "page_count": null,
+      "sha256": null,
+      "status": "failed"
+    }
+  ],
+  "generated_at": "2026-10-22T01:09:30.414110+00:00",
+  "manifest_sha256": "2b959e54ebd11751bd464264f3264f00a088d53c9cb73c9a9c3d8e51eb909504"
+}

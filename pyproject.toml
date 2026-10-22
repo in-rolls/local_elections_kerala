@@ -1,6 +1,6 @@
 [project]
 name = "local-elections-kerala"
-version = "1.0.0"
+version = "1.1.0"
 description = "Historical Kerala local-election records and offline data tools"
 readme = "README.md"
 requires-python = ">=3.12"
@@ -8,7 +8,12 @@ authors = [{ name = "Gaurav Sood", email = "contact@gsood.com" }]
 license = "MIT"
 license-files = ["LICENSE"]
 keywords = ["Kerala", "elections", "panchayats", "reservation", "data"]
-dependencies = ["beautifulsoup4>=4.13", "pyarrow>=21"]
+dependencies = [
+    "beautifulsoup4>=4.13",
+    "pdfplumber>=0.11.9",
+    "pyarrow>=21",
+    "tenacity>=9",
+]
 
 [project.urls]
 Repository = "https://github.com/in-rolls/local_elections_kerala"
@@ -22,7 +27,10 @@ build-backend = "hatchling.build"
 packages = ["src/local_elections_kerala"]
 
 [dependency-groups]
-dev = ["ruff>=0.14"]
+dev = [
+    "pytest>=9",
+    "ruff>=0.14",
+]
 
 [tool.ruff]
 line-length = 88

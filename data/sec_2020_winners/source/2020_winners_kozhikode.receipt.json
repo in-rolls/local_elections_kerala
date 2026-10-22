@@ -1,0 +1,12 @@
+{
+  "document_id": "2020_winners_kozhikode",
+  "errors": [
+    {
+      "error": "<urlopen error timed out>",
+      "error_type": "URLError",
+      "url": "https://sec.kerala.gov.in/public/elercd/download/f981776f-1a6e-4f27-89b0-c548c703ac62"
+    }
+  ],
+  "finished_at": "2026-10-22T01:38:07.093246+00:00",
+  "status": "failed"
+}

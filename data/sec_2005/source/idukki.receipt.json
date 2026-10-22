@@ -1,0 +1,12 @@
+{
+  "document_id": "idukki",
+  "errors": [
+    {
+      "error": "<urlopen error timed out>",
+      "error_type": "URLError",
+      "url": "https://www.sec.kerala.gov.in/public/elercd/download/d24fb151-a193-4cba-9a3d-4bd0fcb3b3b7"
+    }
+  ],
+  "finished_at": "2026-10-22T01:08:42.365987+00:00",
+  "status": "failed"
+}

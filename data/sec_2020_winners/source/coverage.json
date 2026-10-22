@@ -1,0 +1,130 @@
+{
+  "counts": {
+    "failed": 5,
+    "ok": 10
+  },
+  "documents": [
+    {
+      "district": "kasaragod",
+      "document_id": "2020_winners_kasaragod",
+      "kind": "certified_winners_rural",
+      "page_count": 45,
+      "sha256": "3ab01d7a6c2808068f728cdd3d69375ca15d04364215732944326036fbbdbfe0",
+      "status": "ok"
+    },
+    {
+      "district": "kannur",
+      "document_id": "2020_winners_kannur",
+      "kind": "certified_winners_rural",
+      "page_count": 66,
+      "sha256": "02527a1425375b06cdb4e953c3745013106aacc459258127c47e45cb8534795f",
+      "status": "ok"
+    },
+    {
+      "district": "wayanad",
+      "document_id": "2020_winners_wayanad",
+      "kind": "certified_winners_rural",
+      "page_count": null,
+      "sha256": null,
+      "status": "failed"
+    },
+    {
+      "district": "kozhikode",
+      "document_id": "2020_winners_kozhikode",
+      "kind": "certified_winners_rural",
+      "page_count": null,
+      "sha256": null,
+      "status": "failed"
+    },
+    {
+      "district": "malappuram",
+      "document_id": "2020_winners_malappuram",
+      "kind": "certified_winners_rural",
+      "page_count": 92,
+      "sha256": "797d7cbf2448377bd9263e018ae531ae770e535e17b68fd177a565cd86b7277b",
+      "status": "ok"
+    },
+    {
+      "district": "palakkad",
+      "document_id": "2020_winners_palakkad",
+      "kind": "certified_winners_rural",
+      "page_count": 83,
+      "sha256": "a157762ef645630b1bf2c5b82d9aa34f0aeae87735baf3a89b71b405b6e0cc7b",
+      "status": "ok"
+    },
+    {
+      "district": "thrissur",
+      "document_id": "2020_winners_thrissur",
+      "kind": "certified_winners_rural",
+      "page_count": 92,
+      "sha256": "7a2f75bb80be85623f90ce3ee0c0291ffbd5421cb4879dc5ad3a4630ed16c2cc",
+      "status": "ok"
+    },
+    {
+      "district": "ernakulam",
+      "document_id": "2020_winners_ernakulam",
+      "kind": "certified_winners_rural",
+      "page_count": 74,
+      "sha256": "ff5b08ca26647397983454511fe5638d96456df7f855d2577e6c3ee0e9113ab8",
+      "status": "ok"
+    },
+    {
+      "district": "idukki",
+      "document_id": "2020_winners_idukki",
+      "kind": "certified_winners_rural",
+      "page_count": null,
+      "sha256": null,
+      "status": "failed"
+    },
+    {
+      "district": "kottayam",
+      "document_id": "2020_winners_kottayam",
+      "kind": "certified_winners_rural",
+      "page_count": 71,
+      "sha256": "b413ac03568c798bb52db9140014609cb1a4bfc518b6a716c0f37b47e4b3ef6e",
+      "status": "ok"
+    },
+    {
+      "district": "alappuzha",
+      "document_id": "2020_winners_alappuzha",
+      "kind": "certified_winners_rural",
+      "page_count": null,
+      "sha256": null,
+      "status": "failed"
+    },
+    {
+      "district": "pathanamthitta",
+      "document_id": "2020_winners_pathanamthitta",
+      "kind": "certified_winners_rural",
+      "page_count": 42,
+      "sha256": "166f855aaab160463d4763ff7aba93f59ddc4747fe8e8d4fabb1b660a8ede371",
+      "status": "ok"
+    },
+    {
+      "district": "kollam",
+      "document_id": "2020_winners_kollam",
+      "kind": "certified_winners_rural",
+      "page_count": null,
+      "sha256": null,
+      "status": "failed"
+    },
+    {
+      "district": "thiruvananthapuram",
+      "document_id": "2020_winners_thiruvananthapuram",
+      "kind": "certified_winners_rural",
+      "page_count": 63,
+      "sha256": "287fe7ec4b1d28bd96a73ead6f3d507f0fb941f4a163d2e0645391318c3df940",
+      "status": "ok"
+    },
+    {
+      "district": "",
+      "document_id": "2020_winners_urban",
+      "kind": "certified_winners_urban",
+      "page_count": 46,
+      "sha256": "70442b61e039f959de0f357150451383f93a0eb4bcd7435c4b50d5a791d3ebb3",
+      "status": "ok"
+    }
+  ],
+  "generated_at": "2026-10-22T01:39:03.745552+00:00",
+  "manifest_sha256": "80e48fabe525eed6ce26f85eb3a69c2374a2901ca71c7cbe50cad1a7791c26c9"
+}

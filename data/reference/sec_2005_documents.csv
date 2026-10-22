@@ -1,0 +1,16 @@
+document_id,district,kind,source_url,archive_url
+thiruvananthapuram,Thiruvananthapuram,district_report,https://www.sec.kerala.gov.in/public/elercd/download/9ae4e5b8-db05-47ac-937a-b6096d73996a,https://web.archive.org/web/20051125092202id_/http://www.electionker.org/A05.pdf
+kollam,Kollam,district_report,https://www.sec.kerala.gov.in/public/elercd/download/69ff4d74-9ebb-47c2-a1e3-9d0a99eeebb5,
+pathanamthitta,Pathanamthitta,district_report,https://www.sec.kerala.gov.in/public/elercd/download/d90fe970-b945-4e57-8db5-49a64a14433a,
+alappuzha,Alappuzha,district_report,https://www.sec.kerala.gov.in/public/elercd/download/d5bed80e-0c9f-411d-8d5e-a46683bd02df,
+kottayam,Kottayam,district_report,https://www.sec.kerala.gov.in/public/elercd/download/3a4207ab-711e-4da6-95a7-609a1d0dfac9,
+idukki,Idukki,district_report,https://www.sec.kerala.gov.in/public/elercd/download/d24fb151-a193-4cba-9a3d-4bd0fcb3b3b7,
+ernakulam,Ernakulam,district_report,https://www.sec.kerala.gov.in/public/elercd/download/da705d3a-c8ac-4352-b45f-9e10ac033dd1,
+thrissur,Thrissur,district_report,https://www.sec.kerala.gov.in/public/elercd/download/dd4389a4-e503-48b8-9bc9-acbc3b3244ff,
+palakkad,Palakkad,district_report,https://www.sec.kerala.gov.in/public/elercd/download/29ede753-eb43-4326-8bca-31c2959e05e4,
+malappuram,Malappuram,district_report,https://www.sec.kerala.gov.in/public/elercd/download/65e6e4c4-6bc8-4978-8847-09a851a5222b,
+kozhikode,Kozhikode,district_report,https://www.sec.kerala.gov.in/public/elercd/download/48054f74-9e03-435d-b710-0344383a2d24,https://web.archive.org/web/20100509081522id_/http://www.electionker.org/A105.pdf
+wayanad,Wayanad,district_report,https://www.sec.kerala.gov.in/public/elercd/download/f608617a-8af1-4b08-8712-71a1a16314e2,
+kannur,Kannur,district_report,https://www.sec.kerala.gov.in/public/elercd/download/8ffdec19-83e1-44b3-8a86-5fc323e0fbb4,
+kasaragod,Kasaragod,district_report,https://www.sec.kerala.gov.in/public/elercd/download/1da1fe65-d7f4-43e3-bc3e-476c6014b8af,
+heads,Kerala,head_elections,https://www.sec.kerala.gov.in/public/elercd/download/32aa9087-5439-43a6-be1d-dba8d82dd21a,

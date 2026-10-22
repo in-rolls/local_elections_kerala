@@ -36,15 +36,17 @@ The `_raw` suffix marks a value carried from the historical source, without subs
 | `age_raw`, `winner_woman_raw`, `marital_status_raw`, `education_raw`, `occupation_raw` | Historical member-profile attributes, 2010–2020 |
 | `image_url` | Historical photograph URL; the export does not download images |
 | `front_raw`, `votes_raw` | 2005 front and vote cells; vote cells can contain text |
-| `body_heading_raw` | 2005 body heading retained from the table above the record |
+| `body_heading_raw`, `district_heading_raw` | 2005 body heading and district printed in that heading |
 | `source_file`, `source_row` | Source CSV and int32 row number for auditing |
 | `quality_flags` | List of known limitations affecting a record; list of strings |
 
-The two exports have different schemas because the 2005 collection did not include the later profile fields. Seat reservation was not collected for 2005; its absence must not be treated as an unreserved seat. Member sex and seat reservation are different variables. The 2005 `Front` field is retained separately from the later `Party` field.
+The two exports have different schemas because the 2005 collection did not include the later profile fields. The 2005 export also includes `district_heading_raw`, copied from the body heading after its comma. Seat reservation was not collected for 2005; its absence must not be treated as an unreserved seat. Member sex and seat reservation are different variables. The 2005 `Front` field is retained separately from the later `Party` field.
 
 ## Coverage and known gaps
 
-**District labels need review for district-panchayat and corporation records.** The original `scrape_common` function set a missing district from the first body and reused it for subsequent bodies. All district-panchayat records in each of the 2010, 2015, and 2020 combined slices therefore carry `Thiruvananthapuram`. The export preserves the supplied label and flags these two institution types with `district_label_carried_from_first_body`. It does not invent replacement districts. Use the source body context to resolve them before geographic analysis.
+**District labels need review for district-panchayat and corporation records.** The 2005 CSV carries the first district label on 541 rows outside Thiruvananthapuram (311 district-panchayat and 230 corporation records). `district_heading_raw` gives the district printed in each original body heading; mismatches carry `district_label_mismatch`. The source `district_raw` is preserved.
+
+For 2010–2020, the original `scrape_common` function set a missing district from the first body and reused it for subsequent bodies. All district-panchayat records in each of the 2010, 2015, and 2020 combined slices therefore carry `Thiruvananthapuram`. The export preserves the supplied label and flags these two institution types with `district_label_carried_from_first_body`. It does not invent replacement districts. Use the source body context to resolve them before geographic analysis.
 
 **Several CSVs repeat `Ward No.` and `Ward Name` as column headers.** One pair belongs to the listing and the other to the member profile. Reading those files into a dictionary keyed only by header text can discard one pair. The converter reads columns by position and gives the profile fields distinct names. A disagreement receives `ward_profile_mismatch`; no record is deduplicated or selected by that flag.
 
@@ -61,10 +63,12 @@ The combined historical CSV reformatted age values and many 2020 mobile values n
 | Election/input | Historical source | Method and retained evidence |
 |---|---|---|
 | 2005 | [LSG election pages](https://lsgkerala.gov.in/election2005/electionDetails.php) | HTML results tables, with four source data columns retained in the CSV |
+| 2005 SEC supplement | [SEC report catalog](https://www.sec.kerala.gov.in/public/elercd/index/Election_Results/5) | Two archived district PDFs, acquisition receipts, candidate extracts, and validation audits; see [collection notes](data/sec_2005/README.md) |
 | 2010, 2015, 2020 | LSG local-body listings and member-profile pages; [2020 entry point](https://lsgkerala.gov.in/en/lbelection/lbelection/2020) | Joined listing/profile tables and photograph URLs; annual files and the combined CSV are retained |
 | Saved 2010 ward pages | `data/2010/downloaded_htmls/` | 1,042 saved HTML files; the offline parser selects the election table by its six headers and retains file/row provenance |
+| 2010–2020 SEC and LSG supplement | [SEC report catalogs](https://www.sec.kerala.gov.in/public/elercd/index/Election_Results/1) and retained LSG CSV/HTML | 2020 candidate-vote PDF, 10 archived winner gazettes, 2010 saved HTML extraction, and acquisition receipts; 2010/2015 candidate PDFs remain unavailable locally; [methods and validation](data/sec_modern/README.md) |
 
-The original collectors assumed fixed table positions, used parallel member requests, and wrote partial CSVs when collection stopped. Their source code and notebooks remain in the [historical implementation](https://github.com/in-rolls/local_elections_kerala/tree/35c5414). The current tools are offline converters and parsers; they make no requests to LSG or Dataverse.
+The original collectors assumed fixed table positions, used parallel member requests, and wrote partial CSVs when collection stopped. Their source code and notebooks remain in the [historical implementation](https://github.com/in-rolls/local_elections_kerala/tree/35c5414). The SEC acquisition command fetches report PDFs; the converters and parsers operate on retained inputs. No current command fetches LSG profiles or Dataverse files.
 
 The saved HTML's original capture timestamps and complete request manifest were not recorded. New parser receipts identify the saved file and its checksum, without inventing a retrieval date. The original HTML and `localbodies.pdf` remain available for further provenance work.
 
@@ -108,7 +112,7 @@ The HTML parser keeps row order, uses the election-table headers to avoid naviga
 make check
 ```
 
-Checks run the linter and compare every published Parquet field and schema against the source CSVs, including source and export checksums. Maintained Python code lives under `src/local_elections_kerala/parse` and `src/local_elections_kerala/build`.
+Checks run the linter, the SEC regression tests, and a comparison of every published Parquet field and schema against the source CSVs, including source and export checksums. Maintained Python code lives under `src/local_elections_kerala/parse` and `src/local_elections_kerala/build`.
 
 ## Citation
 

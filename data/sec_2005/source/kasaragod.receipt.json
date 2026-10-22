@@ -1,0 +1,12 @@
+{
+  "document_id": "kasaragod",
+  "errors": [
+    {
+      "error": "<urlopen error timed out>",
+      "error_type": "URLError",
+      "url": "https://www.sec.kerala.gov.in/public/elercd/download/1da1fe65-d7f4-43e3-bc3e-476c6014b8af"
+    }
+  ],
+  "finished_at": "2026-10-22T01:09:24.396915+00:00",
+  "status": "failed"
+}

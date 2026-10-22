@@ -1,0 +1,12 @@
+{
+  "document_id": "2020_winners_kollam",
+  "errors": [
+    {
+      "error": "<urlopen error timed out>",
+      "error_type": "URLError",
+      "url": "https://sec.kerala.gov.in/public/elercd/download/9576a16b-6327-4100-8cff-13af19b618cf"
+    }
+  ],
+  "finished_at": "2026-10-22T01:39:01.706778+00:00",
+  "status": "failed"
+}
