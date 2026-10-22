@@ -113,10 +113,10 @@ def test_pdf_parser_handles_tier_change_before_page_header():
 
 def test_cross_source_comparison_catches_missing_old_values():
     paths = [
-        parse.DERIVED / f"{district}_candidates.csv"
+        parse.DERIVED / f"{district}_candidates.parquet"
         for district in ("thiruvananthapuram", "kozhikode")
     ]
-    old = compare.old_winners(DATA / "lsgi-election-kerala-2005.csv")
+    old = compare.old_winners(DATA / "raw/lsg_scrape/2005.csv")
     pdf = compare.pdf_winners(paths)
     mappings, ambiguous = compare.find_matches(pdf, old)
     rows = compare.compare(pdf, old, mappings)
@@ -136,7 +136,7 @@ def test_cross_source_comparison_catches_missing_old_values():
 
 
 def test_2005_heading_district_exposed_without_changing_raw_label():
-    rows, _ = old_rows(DATA / "lsgi-election-kerala-2005.csv")
+    rows, _ = old_rows(DATA / "raw/lsg_scrape/2005.csv")
     koz = next(
         row
         for row in rows

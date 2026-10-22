@@ -1,0 +1,29 @@
+{
+  "comparison_sha256": "10ed8ee44d60d7351d5187aac26b5084e9ac49a34f2c0803e78df2bb86ffb649",
+  "crosswalk_sha256": "ea12a940dca00afdb68b1ab66e29ae7bd3785aa284b2e25cdcf12c98a09a6ddd",
+  "gender_relation_on_name_match": {
+    "opposite": 9966,
+    "same": 86
+  },
+  "joined_unique_max": 21514,
+  "listing_body_groups": 1200,
+  "listing_rows": 21886,
+  "listing_sha256": "bfd5a44d21c0b84212b7f7673f1bd3861cd2aabd33bb19a7d4bf49f4492bfad9",
+  "mapping_status": {
+    "ambiguous_or_weak_evidence": 16,
+    "body_and_ward_mapping": 78,
+    "exact_body_name": 903,
+    "ward_name_mapping": 202
+  },
+  "match_status": {
+    "joined": 21553,
+    "missing_listing_ward": 14,
+    "unresolved_body": 254
+  },
+  "name_equal": 10052,
+  "party_equal": 19249,
+  "pdf_body_rows": 1199,
+  "pdf_candidates_sha256": "7c0ca3355183fc1ee60859407b62d3ddbbd8f594f1d8078593d443ce5e30bbc9",
+  "pdf_leaders_sha256": "fb1d0805667c281cbc4aeb44e4e8b108c0d9ebc1ffb9a1d4da878bbb315e7a3d",
+  "pdf_ward_rows": 21821
+}

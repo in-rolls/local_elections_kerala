@@ -9,15 +9,16 @@ from collections import Counter
 from pathlib import Path
 
 from local_elections_kerala.parse.sec_2020_compare import listing_groups
+from local_elections_kerala.tables import read_rows, write_rows
 
 ROOT = Path(__file__).resolve().parents[3]
-SOURCE = ROOT / "data/sec_2020_winners/source"
+SOURCE = ROOT / "data/raw/sec/2020_winners"
 MANIFEST = ROOT / "data/reference/sec_2020_winners.csv"
-DERIVED = ROOT / "data/sec_2020_winners/derived"
-CANDIDATE_LEADERS = ROOT / "data/sec_modern/derived/2020_vote_leaders.csv"
-LSG_COMPARISON = ROOT / "data/sec_modern/derived/2020_vote_leader_comparison.csv"
-BODY_CROSSWALK = ROOT / "data/sec_modern/derived/2020_body_crosswalk.csv"
-LSG_LISTING = ROOT / "data/lsgi-election-kerala-2020.csv"
+DERIVED = ROOT / "data/interim/sec/2020_winners"
+CANDIDATE_LEADERS = ROOT / "data/interim/sec/modern/2020_vote_leaders.parquet"
+LSG_COMPARISON = ROOT / "data/interim/sec/modern/2020_vote_leader_comparison.parquet"
+BODY_CROSSWALK = ROOT / "data/interim/sec/modern/2020_body_crosswalk.parquet"
+LSG_LISTING = ROOT / "data/raw/lsg_scrape/2020.csv"
 RURAL_START = re.compile(r"^\s*(?:(\d+)\s+)?([DBG]\d{5})-")
 RURAL_NUMBER = re.compile(r"\b(\d{3})-")
 URBAN_ROW = re.compile(r"\b([MC]\d{5})-.*?\s+(\d{1,3})-")
@@ -43,13 +44,6 @@ def sha256(path):
 def read_csv(path):
     with path.open(newline="", encoding="utf-8") as stream:
         return list(csv.DictReader(stream))
-
-
-def write_csv(path, columns, rows):
-    with path.open("w", newline="", encoding="utf-8") as stream:
-        writer = csv.DictWriter(stream, fieldnames=columns)
-        writer.writeheader()
-        writer.writerows(rows)
 
 
 def extract_text(path):
@@ -255,16 +249,16 @@ def main():
         raise ValueError("Ward code repeated across winner gazettes")
     comparison = compare_codes(
         code_rows,
-        read_csv(CANDIDATE_LEADERS),
-        read_csv(LSG_COMPARISON),
-        read_csv(BODY_CROSSWALK),
+        read_rows(CANDIDATE_LEADERS),
+        read_rows(LSG_COMPARISON),
+        read_rows(BODY_CROSSWALK),
         read_csv(LSG_LISTING),
     )
     DERIVED.mkdir(parents=True, exist_ok=True)
-    code_path = DERIVED / "2020_certified_ward_codes.csv"
-    comparison_path = DERIVED / "2020_candidate_certified_comparison.csv"
-    write_csv(code_path, CODE_FIELDS, code_rows)
-    write_csv(comparison_path, COMPARISON_FIELDS, comparison)
+    code_path = DERIVED / "2020_certified_ward_codes.parquet"
+    comparison_path = DERIVED / "2020_candidate_certified_comparison.parquet"
+    write_rows(code_path, code_rows, CODE_FIELDS)
+    write_rows(comparison_path, comparison, COMPARISON_FIELDS)
     audit = {
         "manifest_sha256": sha256(MANIFEST),
         "acquisition_coverage_sha256": sha256(source_coverage),

@@ -1,7 +1,6 @@
 """Extract candidates from the SEC's 2005 district reports and audit each ward."""
 
 import argparse
-import csv
 import hashlib
 import json
 from collections import Counter, defaultdict
@@ -9,9 +8,11 @@ from pathlib import Path
 
 import pdfplumber
 
+from local_elections_kerala.tables import write_rows
+
 ROOT = Path(__file__).resolve().parents[3]
-SOURCE = ROOT / "data" / "sec_2005" / "source"
-DERIVED = ROOT / "data" / "sec_2005" / "derived"
+SOURCE = ROOT / "data/raw/sec/2005_reports"
+DERIVED = ROOT / "data/interim/sec/2005"
 TIERS = {
     "Block Panchayat": "Block",
     "Grama Panchayat": "Grama Panchayat",
@@ -296,19 +297,6 @@ def audit(candidates, parse_problems):
     return groups, issues, warnings
 
 
-def write_csv(path, rows):
-    path.parent.mkdir(parents=True, exist_ok=True)
-    temporary = path.with_suffix(path.suffix + ".part")
-    try:
-        with temporary.open("w", newline="", encoding="utf-8") as stream:
-            writer = csv.DictWriter(stream, fieldnames=FIELDS)
-            writer.writeheader()
-            writer.writerows(rows)
-        temporary.replace(path)
-    finally:
-        temporary.unlink(missing_ok=True)
-
-
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("document_id")
@@ -329,7 +317,7 @@ def main():
             parser.error(
                 f"source does not match successful acquisition receipt: {source}"
             )
-    out = args.out or DERIVED / f"{args.document_id}_candidates.csv"
+    out = args.out or DERIVED / f"{args.document_id}_candidates.parquet"
     candidates, problems = extract(source, args.document_id, args.district)
     groups, issues, warnings = audit(candidates, problems)
     digest = hashlib.sha256(source.read_bytes()).hexdigest()
@@ -373,7 +361,7 @@ def main():
             )
         )
         raise SystemExit(1)
-    write_csv(out, candidates)
+    write_rows(out, candidates, FIELDS)
     with out.open("rb") as stream:
         report["output_sha256"] = hashlib.file_digest(stream, "sha256").hexdigest()
     report_path.write_text(

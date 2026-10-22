@@ -8,9 +8,11 @@ from collections import Counter, defaultdict
 from difflib import SequenceMatcher
 from pathlib import Path
 
+from local_elections_kerala.tables import read_rows, write_rows
+
 ROOT = Path(__file__).resolve().parents[3]
-DERIVED = ROOT / "data/sec_modern/derived"
-LISTING = ROOT / "data/lsgi-election-kerala-2020.csv"
+DERIVED = ROOT / "data/interim/sec/modern"
+LISTING = ROOT / "data/raw/lsg_scrape/2020.csv"
 TIERS = {
     "B": "Block",
     "C": "Corporation",
@@ -75,13 +77,6 @@ def normalize(value):
 
 def district_key(value):
     return normalize(value).replace("KASARGODE", "KASARGOD")
-
-
-def write_csv(path, fields, rows):
-    with path.open("w", newline="", encoding="utf-8") as stream:
-        writer = csv.DictWriter(stream, fieldnames=fields)
-        writer.writeheader()
-        writer.writerows(rows)
 
 
 def pdf_bodies(rows):
@@ -329,17 +324,17 @@ def compare_winners(winners, candidates, crosswalk, groups):
 
 
 def main():
-    candidates_path = DERIVED / "2020_candidates.csv"
-    leaders_path = DERIVED / "2020_vote_leaders.csv"
-    candidates = read_csv(candidates_path)
-    leaders = read_csv(leaders_path)
+    candidates_path = DERIVED / "2020_candidates.parquet"
+    leaders_path = DERIVED / "2020_vote_leaders.parquet"
+    candidates = read_rows(candidates_path)
+    leaders = read_rows(leaders_path)
     groups = listing_groups(read_csv(LISTING))
     crosswalk = make_crosswalk(pdf_bodies(candidates), groups)
     comparison = compare_winners(leaders, candidates, crosswalk, groups)
-    crosswalk_path = DERIVED / "2020_body_crosswalk.csv"
-    comparison_path = DERIVED / "2020_vote_leader_comparison.csv"
-    write_csv(crosswalk_path, CROSSWALK_FIELDS, crosswalk)
-    write_csv(comparison_path, COMPARISON_FIELDS, comparison)
+    crosswalk_path = DERIVED / "2020_body_crosswalk.parquet"
+    comparison_path = DERIVED / "2020_vote_leader_comparison.parquet"
+    write_rows(crosswalk_path, crosswalk, CROSSWALK_FIELDS)
+    write_rows(comparison_path, comparison, COMPARISON_FIELDS)
     audit = {
         "pdf_candidates_sha256": sha256(candidates_path),
         "pdf_leaders_sha256": sha256(leaders_path),

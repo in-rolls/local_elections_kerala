@@ -8,7 +8,7 @@ from local_elections_kerala.parse.to_parquet import DATA, ROOT, export
 
 
 def data_summary():
-    manifest = json.loads((DATA / "fin/MANIFEST.json").read_text())
+    manifest = json.loads((DATA / "release/MANIFEST.json").read_text())
     lines = [
         "<!-- datasets:start -->",
         "",
@@ -22,7 +22,9 @@ def data_summary():
             if "2005" in name
             else "Ward listing with member-profile fields"
         )
-        lines.append(f"| [fin/{name}](data/fin/{name}) | {entry['rows']:,} | {unit} |")
+        lines.append(
+            f"| [release/{name}](data/release/{name}) | {entry['rows']:,} | {unit} |"
+        )
     lines.extend(["", "<!-- datasets:end -->"])
     path = ROOT / "README.md"
     text = path.read_text()
@@ -37,7 +39,7 @@ def main():
     parser.add_argument("command", choices=["verify", "summary"])
     args = parser.parse_args()
     if args.command == "verify":
-        export(DATA, DATA / "fin", check=True)
+        export(DATA, DATA / "release", check=True)
     else:
         data_summary()
 

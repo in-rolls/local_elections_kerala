@@ -21,7 +21,7 @@ from tenacity import (
 
 ROOT = Path(__file__).resolve().parents[3]
 MANIFEST = ROOT / "data" / "reference" / "sec_2005_documents.csv"
-DEFAULT_OUT = ROOT / "data" / "sec_2005" / "source"
+DEFAULT_OUT = ROOT / "data/raw/sec/2005_reports"
 LOGGER = logging.getLogger(__name__)
 
 

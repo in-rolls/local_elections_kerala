@@ -1,7 +1,6 @@
 """Inventory and parse the saved 2010 LSG ward-list pages offline."""
 
 import argparse
-import csv
 import hashlib
 import json
 import re
@@ -11,10 +10,11 @@ from pathlib import Path
 from bs4 import BeautifulSoup
 
 from local_elections_kerala.parse.parse_html import parse_table
+from local_elections_kerala.tables import write_rows
 
 ROOT = Path(__file__).resolve().parents[3]
-SOURCE = ROOT / "data/2010/downloaded_htmls"
-OUT = ROOT / "data/sec_modern/derived"
+SOURCE = ROOT / "data/raw/lsg_scrape/2010_html"
+OUT = ROOT / "data/interim/sec/modern"
 BODY_ID = re.compile(r"/standcommitee/2010/(\d+)")
 FIELDS = [
     "body_id",
@@ -91,11 +91,8 @@ def main():
             item.update(status="failed", error=str(exc))
         inventory.append(item)
     args.out.mkdir(parents=True, exist_ok=True)
-    output = args.out / "2010_saved_ward_listings.csv"
-    with output.open("w", newline="", encoding="utf-8") as stream:
-        writer = csv.DictWriter(stream, fieldnames=FIELDS)
-        writer.writeheader()
-        writer.writerows(records)
+    output = args.out / "2010_saved_ward_listings.parquet"
+    write_rows(output, records, FIELDS)
     report = {
         "source_directory": str(args.source.relative_to(ROOT)),
         "source_files": len(inventory),

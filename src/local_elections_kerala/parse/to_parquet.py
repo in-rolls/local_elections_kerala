@@ -71,17 +71,46 @@ DETAIL = [
     "image_url",
 ]
 OLD_DETAIL = ["ward_no_raw", "elected_member_raw", "front_raw", "votes_raw"]
+# The LSG portal scrape, kept byte-for-byte. The 2015 scrape stopped partway and
+# was resumed from Malappuram, so it is two files with no rows in common.
+SCRAPE = "raw/lsg_scrape"
+COMBINED = "2010_2020_combined.csv"
+OLD_SOURCE = "2005.csv"
 SOURCES = (
-    ("lsgi-election-kerala.csv", 2010),
-    ("lsgi-election-kerala-2015.csv", 2015),
-    ("lsgi-election-kerala-2015-fix.csv", 2015),
-    ("lsgi-election-kerala-2020.csv", 2020),
+    (COMBINED, 2010),
+    ("2015_part1.csv", 2015),
+    ("2015_part2_resumed_malappuram.csv", 2015),
+    ("2020.csv", 2020),
 )
+
+# The scrape wrote the district it started on (Thiruvananthapuram) onto every
+# district panchayat and corporation. A corporation names its city, which is
+# its district. The 14 district panchayats come in this order, each a run of
+# wards numbered from 1; the order is checked against the SEC's 2020 district
+# codes (tests/test_districts.py). Spellings follow the scrape's own.
+DISTRICT_ORDER = [
+    "Thiruvananthapuram",
+    "Kollam",
+    "Pathanamthitta",
+    "Alappuzha",
+    "Kottayam",
+    "Idukki",
+    "Ernakulam",
+    "Thrissur",
+    "Palakkad",
+    "Malappuram",
+    "Kozhikode",
+    "Wayanad",
+    "Kannur",
+    "Kasargode",
+]
 
 
 def schema(old=False):
     fields = GEO + (
-        [*OLD_DETAIL, "body_heading_raw", "district_heading_raw"] if old else DETAIL
+        [*OLD_DETAIL, "body_heading_raw", "district_heading_raw"]
+        if old
+        else [*DETAIL, "district_inferred", "district_inferred_method"]
     )
     return pa.schema(
         [pa.field(n, pa.int16() if n == "year" else pa.string()) for n in fields]
@@ -124,7 +153,7 @@ def modern_rows(path, year):
     header, rows = read_csv(path)
     expected = GEO_HEADERS + DETAIL_HEADERS
     # pandas renamed the profile columns when writing the combined CSV.
-    if path.name == "lsgi-election-kerala.csv":
+    if path.name == COMBINED:
         expected[13:15] = ["Ward No..1", "Ward Name.1"]
     if header != expected:
         raise ValueError(f"{path}: unexpected header")
@@ -133,20 +162,47 @@ def modern_rows(path, year):
         if values[0] not in {"2010", "2015", "2020"}:
             raise ValueError(f"{path}:{number}: unexpected year")
         if int(values[0]) != year:
-            if path.name != "lsgi-election-kerala.csv":
+            if path.name != COMBINED:
                 raise ValueError(f"{path}:{number}: unexpected year in annual source")
             continue
         row = {
             key: value or None for key, value in zip(GEO + DETAIL, values, strict=True)
         }
         row["year"] = year
-        row.update(source_file=path.name, source_row=number, quality_flags=flags(row))
+        row.update(
+            source_file=f"data/{SCRAPE}/{path.name}",
+            source_row=number,
+            quality_flags=flags(row),
+        )
         if row["ward_no_raw"] != row["profile_ward_no_raw"]:
             row["quality_flags"].append("ward_profile_mismatch")
         result.append(row)
     if not result:
         raise ValueError(f"{path}: no {year} observations")
+    infer_districts(result, path)
     return result
+
+
+def infer_districts(rows, path):
+    """District for the rows whose printed district is the scrape's carry-over."""
+    run = -1
+    for row in rows:
+        row["district_inferred"] = row["district_inferred_method"] = None
+        if row["lgi_type"] == "Corporation":
+            row["district_inferred"] = row["corporation_raw"]
+            row["district_inferred_method"] = "corporation_name"
+        elif row["lgi_type"] == "District":
+            if float(row["ward_no_raw"]) == 1:
+                run += 1
+            if run < 0 or run >= len(DISTRICT_ORDER):
+                raise ValueError(f"{path}: district panchayat run {run + 1}")
+            row["district_inferred"] = DISTRICT_ORDER[run]
+            row["district_inferred_method"] = "district_panchayat_order"
+    if (
+        any(r["lgi_type"] == "District" for r in rows)
+        and run != len(DISTRICT_ORDER) - 1
+    ):
+        raise ValueError(f"{path}: {run + 1} district panchayat runs, expected 14")
 
 
 def old_rows(path):
@@ -179,7 +235,7 @@ def old_rows(path):
         row.update(
             body_heading_raw=heading,
             district_heading_raw=district_heading,
-            source_file=path.name,
+            source_file=f"data/{SCRAPE}/{path.name}",
             source_row=number,
             quality_flags=[
                 *flags(row),
@@ -210,18 +266,18 @@ def write_table(path, table):
 def export(data, out, check=False):
     modern = []
     for name, year in SOURCES:
-        modern.extend(modern_rows(data / name, year))
-    old_name = "lsgi-election-kerala-2005.csv"
-    old, excluded = old_rows(data / old_name)
+        modern.extend(modern_rows(data / SCRAPE / name, year))
+    old, excluded = old_rows(data / SCRAPE / OLD_SOURCE)
     tables = {
         "kerala_2005.parquet": pa.Table.from_pylist(old, schema=schema(True)),
         "kerala_2010_2020.parquet": pa.Table.from_pylist(modern, schema=schema()),
     }
-    source_names = sorted({old_name, *(name for name, _ in SOURCES)})
+    source_names = sorted({OLD_SOURCE, *(name for name, _ in SOURCES)})
     manifest = {
         "format_version": 1,
         "sources": [
-            {"file": name, "sha256": digest(data / name)} for name in source_names
+            {"file": f"data/{SCRAPE}/{name}", "sha256": digest(data / SCRAPE / name)}
+            for name in source_names
         ],
         "excluded_2005_structural_rows": excluded,
         "files": [],
@@ -263,7 +319,7 @@ def main():
     parser.add_argument("--check", action="store_true")
     args = parser.parse_args()
     try:
-        export(args.data, args.out or args.data / "fin", args.check)
+        export(args.data, args.out or args.data / "release", args.check)
     except (ValueError, OSError) as exc:
         parser.exit(1, f"{exc}\n")
 

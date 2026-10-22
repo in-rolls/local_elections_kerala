@@ -8,9 +8,11 @@ import re
 from collections import Counter, defaultdict
 from pathlib import Path
 
+from local_elections_kerala.tables import read_rows, write_rows
+
 ROOT = Path(__file__).resolve().parents[3]
-OLD = ROOT / "data" / "lsgi-election-kerala-2005.csv"
-DERIVED = ROOT / "data" / "sec_2005" / "derived"
+OLD = ROOT / "data/raw/lsg_scrape/2005.csv"
+DERIVED = ROOT / "data/interim/sec/2005"
 COLUMNS = [
     "document_id",
     "district",
@@ -59,20 +61,19 @@ def old_winners(path):
 def pdf_winners(paths):
     by_body = defaultdict(dict)
     for path in paths:
-        with path.open(newline="", encoding="utf-8") as stream:
-            for row in csv.DictReader(stream):
-                if row["status"] != "Elected":
-                    continue
-                tier = (
-                    "District"
-                    if row["lgi_type"] == "District Panchayat"
-                    else row["lgi_type"]
-                )
-                key = (row["district"], tier, row["document_id"], int(row["body_no"]))
-                ward_no = int(row["ward_no"])
-                if ward_no in by_body[key]:
-                    raise ValueError(f"duplicate PDF winner: {key}, {ward_no}")
-                by_body[key][ward_no] = row
+        for row in read_rows(path):
+            if row["status"] != "Elected":
+                continue
+            tier = (
+                "District"
+                if row["lgi_type"] == "District Panchayat"
+                else row["lgi_type"]
+            )
+            key = (row["district"], tier, row["document_id"], int(row["body_no"]))
+            ward_no = int(row["ward_no"])
+            if ward_no in by_body[key]:
+                raise ValueError(f"duplicate PDF winner: {key}, {ward_no}")
+            by_body[key][ward_no] = row
     return by_body
 
 
@@ -184,17 +185,15 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("pdf_csv", nargs="+", type=Path)
     parser.add_argument("--old", type=Path, default=OLD)
-    parser.add_argument("--out", type=Path, default=DERIVED / "winner_comparison.csv")
+    parser.add_argument(
+        "--out", type=Path, default=DERIVED / "winner_comparison.parquet"
+    )
     args = parser.parse_args()
     old = old_winners(args.old)
     pdf = pdf_winners(args.pdf_csv)
     mappings, ambiguous = find_matches(pdf, old)
     rows = compare(pdf, old, mappings)
-    args.out.parent.mkdir(parents=True, exist_ok=True)
-    with args.out.open("w", newline="", encoding="utf-8") as stream:
-        writer = csv.DictWriter(stream, fieldnames=COLUMNS)
-        writer.writeheader()
-        writer.writerows(rows)
+    write_rows(args.out, rows, COLUMNS)
     counts = Counter(row["comparison_status"] for row in rows)
     report = {
         "source_sha256": {
