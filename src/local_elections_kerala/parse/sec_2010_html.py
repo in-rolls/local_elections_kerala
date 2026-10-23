@@ -14,7 +14,7 @@ from local_elections_kerala.tables import write_rows
 
 ROOT = Path(__file__).resolve().parents[3]
 SOURCE = ROOT / "data/raw/lsg_scrape/2010_html"
-OUT = ROOT / "data/interim/sec/modern"
+OUT = ROOT / "data/build/sec/modern"
 BODY_ID = re.compile(r"/standcommitee/2010/(\d+)")
 FIELDS = [
     "body_id",

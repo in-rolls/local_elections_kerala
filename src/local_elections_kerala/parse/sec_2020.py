@@ -8,11 +8,12 @@ import subprocess
 from collections import Counter, defaultdict
 from pathlib import Path
 
+from local_elections_kerala.paths import receipt_for
 from local_elections_kerala.tables import write_rows
 
 ROOT = Path(__file__).resolve().parents[3]
 SOURCE = ROOT / "data/raw/sec/modern_candidates/2020_candidates.pdf"
-OUT = ROOT / "data/interim/sec/modern"
+OUT = ROOT / "data/build/sec/modern"
 CANDIDATE_START = re.compile(r"^\s*([A-Z]+)\s+([A-Z]\d{5})\s+")
 WARD_CODE = re.compile(r"\b([A-Z]\d{8})\b")
 TRAILING_NUMBER = re.compile(r"\s{2,}(\d{1,7})\s*$")
@@ -180,7 +181,7 @@ def main():
         raise ValueError(
             f"Candidate rows found on {pages_with_candidates} of {pdf_pages} PDF pages"
         )
-    receipt_path = args.source.with_suffix(".receipt.json")
+    receipt_path = receipt_for(args.source)
     if receipt_path.exists():
         receipt = json.loads(receipt_path.read_text(encoding="utf-8"))
         if receipt.get("sha256") != sha256(args.source) or (

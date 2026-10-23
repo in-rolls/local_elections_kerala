@@ -8,11 +8,12 @@ from pathlib import Path
 
 import pdfplumber
 
+from local_elections_kerala.paths import receipt_for
 from local_elections_kerala.tables import write_rows
 
 ROOT = Path(__file__).resolve().parents[3]
 SOURCE = ROOT / "data/raw/sec/2005_reports"
-DERIVED = ROOT / "data/interim/sec/2005"
+DERIVED = ROOT / "data/build/sec/2005"
 TIERS = {
     "Block Panchayat": "Block",
     "Grama Panchayat": "Grama Panchayat",
@@ -306,7 +307,7 @@ def main():
     args = parser.parse_args()
     source = args.source or SOURCE / f"{args.document_id}.pdf"
     if args.source is None:
-        receipt_path = SOURCE / f"{args.document_id}.receipt.json"
+        receipt_path = receipt_for(source)
         if not receipt_path.exists():
             parser.error(f"missing acquisition receipt: {receipt_path}")
         receipt = json.loads(receipt_path.read_text(encoding="utf-8"))

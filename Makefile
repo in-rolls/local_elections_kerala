@@ -1,13 +1,14 @@
 PY ?= uv run python
 RUFF ?= uv run ruff
 
-.PHONY: sync data lint test verify data-summary check
+.PHONY: sync data fetch-log lint test verify data-summary check
 
 sync:
 	uv sync --frozen --group dev
 
 data:
 	$(PY) -m local_elections_kerala.parse.to_parquet
+	$(PY) -m local_elections_kerala.build.fetch_log
 	$(PY) -m local_elections_kerala.build.release summary
 
 lint:
@@ -19,6 +20,7 @@ test:
 
 verify:
 	$(PY) -m local_elections_kerala.build.release verify
+	$(PY) -m local_elections_kerala.build.fetch_log --check
 
 data-summary:
 	$(PY) -m local_elections_kerala.build.release summary

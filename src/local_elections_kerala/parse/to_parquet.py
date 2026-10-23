@@ -269,8 +269,12 @@ def export(data, out, check=False):
         modern.extend(modern_rows(data / SCRAPE / name, year))
     old, excluded = old_rows(data / SCRAPE / OLD_SOURCE)
     tables = {
-        "kerala_2005.parquet": pa.Table.from_pylist(old, schema=schema(True)),
-        "kerala_2010_2020.parquet": pa.Table.from_pylist(modern, schema=schema()),
+        "release/2005/elected_members.parquet": pa.Table.from_pylist(
+            old, schema=schema(True)
+        ),
+        "release/elected_members_2010_2020.parquet": pa.Table.from_pylist(
+            modern, schema=schema()
+        ),
     }
     source_names = sorted({OLD_SOURCE, *(name for name, _ in SOURCES)})
     manifest = {
@@ -319,7 +323,7 @@ def main():
     parser.add_argument("--check", action="store_true")
     args = parser.parse_args()
     try:
-        export(args.data, args.out or args.data / "release", args.check)
+        export(args.data, args.out or args.data, args.check)
     except (ValueError, OSError) as exc:
         parser.exit(1, f"{exc}\n")
 

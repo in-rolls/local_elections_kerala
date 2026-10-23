@@ -9,15 +9,16 @@ from collections import Counter
 from pathlib import Path
 
 from local_elections_kerala.parse.sec_2020_compare import listing_groups
+from local_elections_kerala.paths import RECORDS, receipt_for
 from local_elections_kerala.tables import read_rows, write_rows
 
 ROOT = Path(__file__).resolve().parents[3]
 SOURCE = ROOT / "data/raw/sec/2020_winners"
-MANIFEST = ROOT / "data/reference/sec_2020_winners.csv"
-DERIVED = ROOT / "data/interim/sec/2020_winners"
-CANDIDATE_LEADERS = ROOT / "data/interim/sec/modern/2020_vote_leaders.parquet"
-LSG_COMPARISON = ROOT / "data/interim/sec/modern/2020_vote_leader_comparison.parquet"
-BODY_CROSSWALK = ROOT / "data/interim/sec/modern/2020_body_crosswalk.parquet"
+MANIFEST = ROOT / "data/search_log/sec/sec_2020_winners.csv"
+DERIVED = ROOT / "data/build/sec/2020_winners"
+CANDIDATE_LEADERS = ROOT / "data/build/sec/modern/2020_vote_leaders.parquet"
+LSG_COMPARISON = ROOT / "data/build/sec/modern/2020_vote_leader_comparison.parquet"
+BODY_CROSSWALK = ROOT / "data/build/sec/modern/2020_body_crosswalk.parquet"
 LSG_LISTING = ROOT / "data/raw/lsg_scrape/2020.csv"
 RURAL_START = re.compile(r"^\s*(?:(\d+)\s+)?([DBG]\d{5})-")
 RURAL_NUMBER = re.compile(r"\b(\d{3})-")
@@ -137,7 +138,7 @@ def parse_pdf(path, is_urban):
         raise ValueError(f"{path.name}: duplicate ward codes")
     if not rows:
         raise ValueError(f"{path.name}: no ward codes")
-    receipt_path = path.with_suffix(".receipt.json")
+    receipt_path = receipt_for(path)
     receipt = json.loads(receipt_path.read_text(encoding="utf-8"))
     if receipt.get("sha256") != sha256(path) or receipt.get("page_count") != page_count:
         raise ValueError(f"{path.name}: PDF and acquisition receipt differ")
@@ -215,14 +216,14 @@ def compare_codes(code_rows, leader_rows, lsg_rows, crosswalk_rows, listing_rows
 
 def main():
     manifest = read_csv(MANIFEST)
-    source_coverage = SOURCE / "coverage.json"
+    source_coverage = RECORDS / SOURCE.name / "coverage.json"
     coverage = json.loads(source_coverage.read_text(encoding="utf-8"))
     if len(manifest) != len(coverage["documents"]):
         raise ValueError("Winner manifest and acquisition coverage differ")
     code_rows, source_audits = [], []
     for source in manifest:
         path = SOURCE / f"{source['document_id']}.pdf"
-        receipt_path = path.with_suffix(".receipt.json")
+        receipt_path = receipt_for(path)
         receipt = json.loads(receipt_path.read_text(encoding="utf-8"))
         if receipt["status"] != "ok":
             source_audits.append(

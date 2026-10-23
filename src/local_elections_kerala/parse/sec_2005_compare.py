@@ -12,7 +12,7 @@ from local_elections_kerala.tables import read_rows, write_rows
 
 ROOT = Path(__file__).resolve().parents[3]
 OLD = ROOT / "data/raw/lsg_scrape/2005.csv"
-DERIVED = ROOT / "data/interim/sec/2005"
+DERIVED = ROOT / "data/build/sec/2005"
 COLUMNS = [
     "document_id",
     "district",

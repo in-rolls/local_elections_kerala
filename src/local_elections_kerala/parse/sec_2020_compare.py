@@ -11,7 +11,7 @@ from pathlib import Path
 from local_elections_kerala.tables import read_rows, write_rows
 
 ROOT = Path(__file__).resolve().parents[3]
-DERIVED = ROOT / "data/interim/sec/modern"
+DERIVED = ROOT / "data/build/sec/modern"
 LISTING = ROOT / "data/raw/lsg_scrape/2020.csv"
 TIERS = {
     "B": "Block",

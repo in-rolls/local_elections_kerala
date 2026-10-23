@@ -27,12 +27,14 @@ def tokens(name):
 def test_district_panchayat_order_matches_sec_2020_codes():
     rows = [
         r
-        for r in pq.read_table(DATA / "release/kerala_2010_2020.parquet").to_pylist()
+        for r in pq.read_table(
+            DATA / "release/elected_members_2010_2020.parquet"
+        ).to_pylist()
         if r["year"] == 2020 and r["lgi_type"] == "District"
     ]
     leaders = {
         r["ward_code"]: r["winner_name_raw"]
-        for r in read_rows(DATA / "interim/sec/modern/2020_vote_leaders.parquet")
+        for r in read_rows(DATA / "build/sec/modern/2020_vote_leaders.parquet")
     }
     matches = defaultdict(lambda: [0] * len(DISTRICT_ORDER))
     for row in rows:

@@ -28,7 +28,7 @@
   },
   "files": [
     {
-      "file": "kerala_2005.parquet",
+      "file": "release/2005/elected_members.parquet",
       "rows": 20551,
       "sha256": "8c751275b86dac610b88000cc0f3e4af9b1059caecf1d0cd2eb0d276a6b16a94",
       "schema": [
@@ -115,7 +115,7 @@
       ]
     },
     {
-      "file": "kerala_2010_2020.parquet",
+      "file": "release/elected_members_2010_2020.parquet",
       "rows": 65296,
       "sha256": "e94e3988abede6b1cfe5de723a5d499f0b5adf0533cfdf03b435939e05cc0c20",
       "schema": [

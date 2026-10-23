@@ -20,8 +20,9 @@ from tenacity import (
 )
 
 ROOT = Path(__file__).resolve().parents[3]
-MANIFEST = ROOT / "data" / "reference" / "sec_2005_documents.csv"
+MANIFEST = ROOT / "data/search_log/sec/sec_2005_documents.csv"
 DEFAULT_OUT = ROOT / "data/raw/sec/2005_reports"
+DEFAULT_RECORDS = ROOT / "data/search_log/sec/2005_reports"
 LOGGER = logging.getLogger(__name__)
 
 
@@ -50,9 +51,10 @@ def pdf_pages(path):
     return pages
 
 
-def fetch_one(row, out, attempts_log, max_attempts, timeout):
+def fetch_one(row, out, attempts_log, max_attempts, timeout, records=None):
+    """Fetch one document into `out`; its receipt goes to `records` (default `out`)."""
     target = out / f"{row['document_id']}.pdf"
-    receipt_path = out / f"{row['document_id']}.receipt.json"
+    receipt_path = (records or out) / f"{row['document_id']}.receipt.json"
     if target.exists() and receipt_path.exists():
         receipt = json.loads(receipt_path.read_text(encoding="utf-8"))
         if receipt.get("status") == "ok" and receipt.get("sha256") == sha256(target):
@@ -155,11 +157,12 @@ def fetch_one(row, out, attempts_log, max_attempts, timeout):
     return receipt
 
 
-def coverage(rows, out, manifest):
+def coverage(rows, out, manifest, records=None):
+    records = records or out
     documents = []
     for row in rows:
         document_id = row["document_id"]
-        receipt_path = out / f"{document_id}.receipt.json"
+        receipt_path = records / f"{document_id}.receipt.json"
         source_path = out / f"{document_id}.pdf"
         if not receipt_path.exists():
             status = "not_attempted"
@@ -187,7 +190,7 @@ def coverage(rows, out, manifest):
         "counts": dict(Counter(doc["status"] for doc in documents)),
         "documents": documents,
     }
-    (out / "coverage.json").write_text(
+    (records / "coverage.json").write_text(
         json.dumps(result, indent=2, sort_keys=True) + "\n", encoding="utf-8"
     )
     return result
@@ -197,6 +200,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--manifest", type=Path, default=MANIFEST)
     parser.add_argument("--out", type=Path, default=DEFAULT_OUT)
+    parser.add_argument("--records", type=Path, default=DEFAULT_RECORDS)
     parser.add_argument(
         "--only", nargs="*", help="Document IDs to attempt; default is all"
     )
@@ -213,9 +217,17 @@ def main():
     if unknown:
         parser.error(f"unknown document IDs: {', '.join(sorted(unknown))}")
     args.out.mkdir(parents=True, exist_ok=True)
-    attempts_log = args.out / "attempts.jsonl"
+    args.records.mkdir(parents=True, exist_ok=True)
+    attempts_log = args.records / "attempts.jsonl"
     results = [
-        fetch_one(row, args.out, attempts_log, args.max_attempts, args.timeout)
+        fetch_one(
+            row,
+            args.out,
+            attempts_log,
+            args.max_attempts,
+            args.timeout,
+            args.records,
+        )
         for row in rows
         if row["document_id"] in selected
     ]
@@ -225,7 +237,7 @@ def main():
         "selected_failed": sum(r["status"] == "failed" for r in results),
         "not_selected": len(rows) - len(results),
     }
-    inventory = coverage(rows, args.out, args.manifest)
+    inventory = coverage(rows, args.out, args.manifest, args.records)
     summary["inventory"] = inventory["counts"]
     print(json.dumps(summary, sort_keys=True))
     if summary["selected_failed"]:

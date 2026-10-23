@@ -11,7 +11,7 @@ from local_elections_kerala.tables import read_rows, write_rows
 
 ROOT = Path(__file__).resolve().parents[3]
 DATA = ROOT / "data"
-OUT = DATA / "interim/sec/modern"
+OUT = DATA / "build/sec/modern"
 SOURCES = {
     2010: ["raw/lsg_scrape/2010_2020_combined.csv"],
     2015: [
