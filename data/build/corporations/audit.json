@@ -1,0 +1,40 @@
+{
+  "rows": 1608,
+  "boundary_supported_links": 718,
+  "profile_rows": 1185,
+  "sec_rows": 412,
+  "secondary_rows": 1246,
+  "provisional_status_counts": {
+    "profile_only_not_election_verified": 361,
+    "secondary_reported_vote_leader": 834,
+    "official_unique_vote_leader": 410,
+    "secondary_name_official_unique_votes": 1,
+    "unresolved_vote_tie": 1,
+    "missing": 1
+  },
+  "missing_profiles_2015": [
+    "C01001001",
+    "C07003039"
+  ],
+  "missing_sec_2020": [
+    "C07003063",
+    "C13006010"
+  ],
+  "missing_secondary_2025": [
+    "C01001066"
+  ],
+  "gender_pairs_on_exact_name_match_2020": {
+    "M / Female": 100,
+    "F / Male": 71,
+    "M / Male": 1
+  },
+  "input_sha256": {
+    "data/release/elected_members_2010_2020.parquet": "e94e3988abede6b1cfe5de723a5d499f0b5adf0533cfdf03b435939e05cc0c20",
+    "data/build/sec/modern/2020_vote_leader_comparison.parquet": "10ed8ee44d60d7351d5187aac26b5084e9ac49a34f2c0803e78df2bb86ffb649",
+    "data/raw/secondary/farzzn/manifest.json": "bf5cabef6204182d52f7478850dbdfcb1bf7495589848efff81be0fa52d6cca6"
+  },
+  "output_sha256": {
+    "boundary_supported_links.parquet": "f5d6addfab9731da30487f016ebcff07ccd2326765543d10176d670ebed4a305",
+    "source_comparison.parquet": "0a2b8cc55509d098d4a5aa1dd6dbe81849072dbaf54cb528eb2d8381ad1e93d8"
+  }
+}

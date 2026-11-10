@@ -1,0 +1,7 @@
+{
+  "source_url": "https://www.sec.kerala.gov.in/public/ic/download/f3a13514-7939-44d0-a219-75fc3bf8d4b9",
+  "retrieved_at": "2026-11-09T07:14:59.976665+00:00",
+  "path": "data/raw/sec/urban_review/sec_orders_2015.pdf",
+  "status": "failed",
+  "error": "HTTPSConnectionPool(host='www.sec.kerala.gov.in', port=443): Max retries exceeded with url: /public/ic/download/f3a13514-7939-44d0-a219-75fc3bf8d4b9 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.sec.kerala.gov.in', port=443) at 0x108cd0ec0>, 'Connection to www.sec.kerala.gov.in timed out. (connect timeout=10)'))"
+}

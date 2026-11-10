@@ -1,0 +1,15 @@
+{
+  "archive_url": "",
+  "attempt": 1,
+  "bytes": 1741222,
+  "content_type": "application/pdf",
+  "document_id": "kochi_budget_2019",
+  "finished_at": "2026-11-09T07:04:12.143609+00:00",
+  "http_status": 200,
+  "page_count": 391,
+  "sha256": "fce4b90674c7053de6621eeaeca63d624eaee0dc1db2b091760f099d6344e89f",
+  "source_url": "https://kochicorporation.lsgkerala.gov.in/system/files/2022-02/BUDGET_2019-2020_0.pdf",
+  "started_at": "2026-11-09T07:04:07.301211+00:00",
+  "status": "ok",
+  "url": "https://kochicorporation.lsgkerala.gov.in/system/files/2022-02/BUDGET_2019-2020_0.pdf"
+}

@@ -70,6 +70,26 @@ def rows():
                 "source": SCRAPED,
             }
         )
+    for manifest in sorted((RAW / "secondary").glob("*/manifest.json")):
+        for receipt in json.loads(manifest.read_text(encoding="utf-8")):
+            path = ROOT / receipt["path"]
+            if (
+                digest(path) != receipt["sha256"]
+                or path.stat().st_size != receipt["bytes"]
+            ):
+                raise ValueError(f"{path}: differs from its source manifest")
+            out.append(
+                {
+                    "path": receipt["path"],
+                    "url": receipt["source_url"],
+                    "sha256": receipt["sha256"],
+                    "bytes": receipt["bytes"],
+                    "fetched_at_utc": receipt["retrieved_at"],
+                    "method": "live",
+                    "referrer": "",
+                    "source": receipt["source_commit"],
+                }
+            )
     return sorted(out, key=lambda r: r["path"])
 
 

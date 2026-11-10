@@ -1,0 +1,12 @@
+{
+  "document_id": "urban_winners_2025",
+  "errors": [
+    {
+      "error": "<urlopen error timed out>",
+      "error_type": "URLError",
+      "url": "https://www.sec.kerala.gov.in/public/elercd/download/90941035-a6b5-46e0-b20d-667aa9894a46"
+    }
+  ],
+  "finished_at": "2026-11-09T07:04:04.110533+00:00",
+  "status": "failed"
+}

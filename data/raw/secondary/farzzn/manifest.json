@@ -1,0 +1,47 @@
+[
+  {
+    "path": "data/raw/secondary/farzzn/Kerala_LocalBodies_Election_2015_MASTER.csv",
+    "source_url": "https://raw.githubusercontent.com/Farzzn/ElectionDataScapping/fa12d39aaacc842370b5674dc8ef59befaea30a3/Results/Kerala_LocalBodies_Election_2015_MASTER.csv",
+    "source_commit": "fa12d39aaacc842370b5674dc8ef59befaea30a3",
+    "source_path": "Results/Kerala_LocalBodies_Election_2015_MASTER.csv",
+    "retrieved_at": "2026-11-09T07:06:04.749360+00:00",
+    "bytes": 2038422,
+    "sha256": "70c6c8806694cac8b2a446f2e9841dfb9774aedea3be6e6d8aecb6a934cdd23c"
+  },
+  {
+    "path": "data/raw/secondary/farzzn/Kerala_LocalBodies_Election_2020_MASTER.csv",
+    "source_url": "https://raw.githubusercontent.com/Farzzn/ElectionDataScapping/fa12d39aaacc842370b5674dc8ef59befaea30a3/Results/Kerala_LocalBodies_Election_2020_MASTER.csv",
+    "source_commit": "fa12d39aaacc842370b5674dc8ef59befaea30a3",
+    "source_path": "Results/Kerala_LocalBodies_Election_2020_MASTER.csv",
+    "retrieved_at": "2026-11-09T07:06:05.255061+00:00",
+    "bytes": 2580058,
+    "sha256": "5dbc1eb4d62366890fd171412fb9707657ef9afd7f943881777cfa7e1f5a70ac"
+  },
+  {
+    "path": "data/raw/secondary/farzzn/Kerala_LocalBodies_Election_2025_MASTER.csv",
+    "source_url": "https://raw.githubusercontent.com/Farzzn/ElectionDataScapping/fa12d39aaacc842370b5674dc8ef59befaea30a3/Results/Kerala_LocalBodies_Election_2025_MASTER.csv",
+    "source_commit": "fa12d39aaacc842370b5674dc8ef59befaea30a3",
+    "source_path": "Results/Kerala_LocalBodies_Election_2025_MASTER.csv",
+    "retrieved_at": "2026-11-09T07:06:05.783901+00:00",
+    "bytes": 2733761,
+    "sha256": "ac6736beda172f7897835c0abeeacca3e706b6cf08760cf121134a611b681379"
+  },
+  {
+    "path": "data/raw/secondary/farzzn/2015_Scapping_Code-Part1.ipynb",
+    "source_url": "https://raw.githubusercontent.com/Farzzn/ElectionDataScapping/fa12d39aaacc842370b5674dc8ef59befaea30a3/Source%20Code/2015_Scapping_Code-Part1.ipynb",
+    "source_commit": "fa12d39aaacc842370b5674dc8ef59befaea30a3",
+    "source_path": "Source Code/2015_Scapping_Code-Part1.ipynb",
+    "retrieved_at": "2026-11-09T07:06:05.989533+00:00",
+    "bytes": 17162,
+    "sha256": "019242c180104c6b9c8eb5c6b4cfa90170ff2d30644bd1622b0c69ca683456be"
+  },
+  {
+    "path": "data/raw/secondary/farzzn/README.md",
+    "source_url": "https://raw.githubusercontent.com/Farzzn/ElectionDataScapping/fa12d39aaacc842370b5674dc8ef59befaea30a3/README.md",
+    "source_commit": "fa12d39aaacc842370b5674dc8ef59befaea30a3",
+    "source_path": "README.md",
+    "retrieved_at": "2026-11-09T07:06:06.195532+00:00",
+    "bytes": 3037,
+    "sha256": "5e203e33404149cc622c1f0b72861b50ae764e0ed7a57b0fd3c41bddae48ca12"
+  }
+]

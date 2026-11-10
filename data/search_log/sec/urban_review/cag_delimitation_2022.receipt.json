@@ -1,0 +1,15 @@
+{
+  "archive_url": "",
+  "attempt": 1,
+  "bytes": 590651,
+  "content_type": "application/pdf",
+  "document_id": "cag_delimitation_2022",
+  "finished_at": "2026-11-09T07:04:07.300947+00:00",
+  "http_status": 200,
+  "page_count": 13,
+  "sha256": "10599cb38a535929c4c69c237e0604b0eaada22d931d272a0e8e992ff9a91c83",
+  "source_url": "https://cag.gov.in/webroot/uploads/download_audit_report/2022/Kerala_Au.I_Report_3_2022_Chapter%20II-062badceaab8eb4.38864529.pdf",
+  "started_at": "2026-11-09T07:04:04.111417+00:00",
+  "status": "ok",
+  "url": "https://cag.gov.in/webroot/uploads/download_audit_report/2022/Kerala_Au.I_Report_3_2022_Chapter%20II-062badceaab8eb4.38864529.pdf"
+}

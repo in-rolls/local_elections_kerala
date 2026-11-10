@@ -1,0 +1,12 @@
+{
+  "document_id": "election_report_2015",
+  "errors": [
+    {
+      "error": "<urlopen error timed out>",
+      "error_type": "URLError",
+      "url": "https://www.sec.kerala.gov.in/public/elercd/download/758ee616-0925-4aec-b5e3-002faa535e2c"
+    }
+  ],
+  "finished_at": "2026-11-09T07:03:04.103110+00:00",
+  "status": "failed"
+}

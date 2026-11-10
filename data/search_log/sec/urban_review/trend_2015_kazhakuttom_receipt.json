@@ -1,0 +1,12 @@
+{
+  "url": "https://www.sec.kerala.gov.in/results/trend2015/includes/lb_ajax2.php",
+  "method": "POST",
+  "payload": {
+    "_p": "can",
+    "_w": "C01001001",
+    "_t": "C",
+    "_s": "L"
+  },
+  "retrieved_at": "2026-11-09T07:04:41.032679+00:00",
+  "error": "HTTPSConnectionPool(host='www.sec.kerala.gov.in', port=443): Max retries exceeded with url: /results/trend2015/includes/lb_ajax2.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.sec.kerala.gov.in', port=443) at 0x10a27ba10>, 'Connection to www.sec.kerala.gov.in timed out. (connect timeout=25)'))"
+}

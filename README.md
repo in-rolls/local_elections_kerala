@@ -31,6 +31,10 @@ The later export contains 21,607 records for 2010, 21,803 for 2015, and 21,886 f
 
 The 2015 scrape is two files because the collector stopped partway and was resumed from Malappuram; the two share no rows. Analysis should read the Parquet tables, not the raw CSVs.
 
+### Corporation source handoff
+
+The [corporation review](data/search_log/sec/urban_review/README.md) adds provisional election results for 2015, 2020, and 2025, compares them with the historical profiles, and documents boundary continuity and source conflicts. The typed handoff preserves missing sex, a vote tie, and later-incumbent discrepancies; it is separate from the published release.
+
 ## Column dictionary
 
 The `_raw` suffix marks a value carried from the historical source, without substantive recoding. Empty cells become null. Year is an integer; names, ward identifiers, phone fields, age, and vote text remain strings so conversion does not discard leading zeroes or coerce source labels. Each record carries its source filename and logical CSV row number, starting at 1 after the header.
