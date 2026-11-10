@@ -3,4 +3,4 @@ data/sec_2005/derived/*.csv -text whitespace=cr-at-eol
 data/sec_modern/derived/*.csv -text whitespace=cr-at-eol
 data/sec_2020_winners/derived/*.csv -text whitespace=cr-at-eol
 data/2010/downloaded_htmls/*.html -text whitespace=cr-at-eol
-data/raw/** -text
+data/** -text
